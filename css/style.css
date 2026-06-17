@@ -10,3 +10,14 @@ body{margin:0;background:var(--ivory);font-family:Montserrat,sans-serif;color:va
 .hero{height:70vh;background:linear-gradient(rgba(31,42,68,.75),rgba(31,42,68,.75));display:flex;align-items:center;justify-content:center;color:white}
 .hero-inner{text-align:center}
 .container{padding:80px 10%}
+.logo,
+h1,
+h2,
+h3 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 2px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
