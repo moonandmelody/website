@@ -9,12 +9,12 @@
 body{
     margin:0;
     background:var(--ivory);
-    font-family:Montserrat,sans-serif;
+    font-family:'Cinzel',sans-serif;
     color:var(--navy)
 }
 
 .logo,h1,h2{
-    font-family:Cinzel,serif
+    font-family:'Cinzel',serif
 }
 
 .navbar{
@@ -60,4 +60,8 @@ body{
 
 .secondaryLogoHeader{
     height: 100px;
+}
+
+.uppercase{
+    text-transform: capitalize;
 }
