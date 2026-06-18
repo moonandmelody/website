@@ -21,7 +21,7 @@ body{
     display:flex;
     justify-content:space-between;
     padding:20px 8%;
-    background:white
+    background:var(--ivory);
 }
 
 .navbar ul{
