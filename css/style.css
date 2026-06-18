@@ -1,7 +1,7 @@
 :root{
     --navy:#1F2A44;
     --gold:#C4A15A;
-    --ivory:#F6F0E8;
+    --ivory:#F4EBE7;
     --rose:#C9A3A3;
     --brown:#6B4F4F;
 }
@@ -37,7 +37,7 @@ body{
 
 .hero{
     height:70vh;
-    background:#F6F0EB;
+    background:#F4EBE7;
     display:flex;
     align-items:center;
     justify-content:center;
