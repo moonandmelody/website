@@ -1,7 +1,13 @@
+/*
+cream colour hexcode: #f6f0ea
+Dark Blue hexcode: #061627
+Gold hexcode: ac7e44
+*/
+
 :root{
-    --navy:#1F2A44;
-    --gold:#C4A15A;
-    --ivory:#F4EBE7;
+    --navy:#061627;
+    --gold:#AC7E44;
+    --ivory:#F6F0EA;
     --rose:#C9A3A3;
     --brown:#6B4F4F;
 }
@@ -9,35 +15,49 @@
 body{
     margin:0;
     background:var(--ivory);
-    font-family:'Cinzel',sans-serif;
+    font-family:'Cinzel',serif;
     color:var(--navy)
 }
 
 .logo,h1,h2{
-    font-family:'Cinzel',serif
+    font-family:'Cinzel',serif;
 }
 
 .navbar{
     display:flex;
     justify-content:space-between;
-    padding:20px 8%;
+    padding:10px 100px 10px  30px;
     background:var(--ivory);
+    position: sticky;
+    width: stretch;
+    z-index: 999;
+    top: 0;
 }
 
 .navbar ul{
     display:flex;
     gap:24px;
-    list-style:none
+    list-style:none;
+    align-items: center;
+}
+
+.navbar li{
+    height: 20px;
+}
+
+.navbar li:hover a.padding{
+    color: var(--gold);
 }
 
 .navbar a{
     text-decoration:none;
-    color:var(--navy)
+    color:var(--navy);
+    background-color: transparent;
 }
 
 .hero{
     height:70vh;
-    background:#F4EBE7;
+    background: var(--navy);
     display:flex;
     align-items:center;
     justify-content:center;
@@ -48,20 +68,134 @@ body{
     text-align:center
 }
 
+.hero-inner-left{
+    height: 100%;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-inner-right{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .container{
-    padding:80px 10%
+    padding:10px 5%
 }
 
 .logo, h1, h2, h3 {
     font-family: 'Cinzel', serif;
-    letter-spacing: 2px;
-    color:#1F2A44;
+    letter-spacing: 1px;
+    color:var(--navy);
 }
 
 .secondaryLogoHeader{
-    height: 100px;
+    height: 90px;
 }
 
 .uppercase{
-    text-transform: capitalize;
+    text-transform: uppercase;
+}
+
+.padding{
+    padding: 0 10px 0 10px;
+    display: inline-block;
+}
+
+.productNameAndTaglineHeader{
+    height:70px;
+    padding-bottom: 8px;
+}
+
+.displayInline{
+    display: inline-block;
+}
+
+.positionRelative{
+    position: relative;
+}
+
+.zIndex1{
+    z-index: 1;
+}
+
+.left-20{
+    left: -20px;
+}
+
+.primaryLogoHeight0{
+    height: 40px;
+}
+
+.primaryLogoHeight40{
+    height: 40px;
+}
+
+.text h1,h2,h3,h4,h5,h6{
+    color: var(--gold);
+    font-family: 'Montserrat', serif;
+}
+
+.ourStorySection{
+    background-color: white;
+    height:50vh
+}
+
+.featuredCollectionSection{
+    background-color: var(--ivory);
+    height:50vh
+}
+
+.aboutSection{
+    background-color: white;
+    height:50vh
+}
+
+.contactUsSection{
+    background-color: var(--navy);
+    height:50vh
+}
+
+.hero-inner-right div{
+    width:100%;
+}
+
+.questionClass{
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.textWeight100{
+    font-weight: 100;
+}
+
+.montserrat{
+   font-family: 'Montserrat',serif;
+}
+
+.answerClass{
+    font-weight: 100;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.footer{
+    position: relative !important;
+    height: 5vh;
+    color: var(--navy);
+    font-weight: 300;
+}
+
+.footer h4{
+    margin-top:13px;
+    display: flex;
+    justify-content: center;
+    font-weight: 200;
+    color: var(--navy);
 }

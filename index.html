@@ -1,36 +1,114 @@
 <!DOCTYPE html>
 <html lang="EN"><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Moon & Melody - Index</title>
-<!--<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">-->
-<link rel="stylesheet" href="css/style.css" />
-<link rel="preconnect" href="https://googleapis.com">
-<link rel="preconnect" href="https://gstatic.com" crossorigin>
-<link href="https://googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Moon & Melody</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/carousel.css" />
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<nav class="navbar">
-<div class="logo"><img src="images/secondaryLogo.png" alt="primary logo" class="secondaryLogoHeader">MOON & MELODY</div>
-<ul>
-<li><a href="index.html" class="uppercase">Home</a></li>
-<li><a href="pages/shop.html" class="uppercase">Shop</a></li>
-<li><a href="pages/about.html" class="uppercase">About</a></li>
-<li><a href="pages/cafe.html" class="uppercase">Cafe</a></li>
-<li><a href="pages/contact.html" class="uppercase">Contact</a></li>
-</ul>
+<nav id="headerNav" class="navbar">
+    <div class="logo">
+        <img src="images/secondaryLogo.png" alt="primary logo" class="secondaryLogoHeader positionRelative zIndex1">
+        <img src="images/productNameAndTagline.png" alt="MOON & MELODY" class="productNameAndTaglineHeader positionRelative left-20">
+    </div>
+
+    <ul>
+        <li><a href="index.html" class="uppercase padding">Home</a></li>
+        <li><a href="#" class="uppercase padding">Our Story</a></li>
+        <li><a href="#" class="uppercase padding">Collections</a></li>
+        <li><a href="#" class="uppercase padding">About</a></li>
+        <li><a href="#" class="uppercase padding">Contact</a></li>
+    </ul>
 </nav>
 
-<section class="hero">
-<div class="hero-inner">
-<h1>Moon & Melody</h1>
-<p>Elevated Indulgence</p>
+<div id="" class="hero">
+    <div class="carousel-container">
+        <!-- Navigation Buttons -->
+        <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
+        <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+
+        <!-- Slide Track -->
+        <div class="carousel-div">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide">
+                    <div class="hero-inner-left">
+                        <img src="images/primaryLogo.png" alt="primaryLogo" class="primaryLogoHeight40">
+                    </div>
+                    <div class="hero-inner-right">
+                        <div>
+                            <h1 class="textWeight100 uppercase questionClass" style="color: var(--gold)">What is <br/>Moon & Melody?</h1>
+                        </div>
+                        <div>
+                            <h3 class="textWeight100 answerClass">It is a concept kitchen</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="hero-inner-left">
+                        <img src="images/primaryLogo.png" alt="primaryLogo" class="primaryLogoHeight40">
+                    </div>
+                    <div class="hero-inner-right">
+                        <div>
+                            <h1 class="textWeight100 uppercase questionClass" style="color: var(--gold)">What is <br/>Moon & Melody?</h1>
+                        </div>
+                        <div>
+                            <h3 class="textWeight100 answerClass">It is a concept kitchen 1</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="hero-inner-left">
+                        <img src="images/primaryLogo.png" alt="primaryLogo" class="primaryLogoHeight40">
+                    </div>
+                    <div class="hero-inner-right">
+                        <div>
+                            <h1 class="textWeight100 uppercase questionClass" style="color: var(--gold)">What is <br/>Moon & Melody?</h1>
+                        </div>
+                        <div>
+                            <h3 class="textWeight100 answerClass">It is a concept kitchen 2</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-indicators" id="carouselIndicators">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+        </div>
+    </div>
 </div>
+
+<section id="ourStorySection" class="container ourStorySection">
+    <h1 class="textWeight100 uppercase">Our Story</h1>
 </section>
-<section class="container">
-<h2>Index</h2>
-<p>Premium placeholder content for the Index page.</p>
+
+<section id="featuredCollectionSection" class="container featuredCollectionSection">
+    <h1 class="textWeight100 uppercase">Collections</h1>
 </section>
+
+<section id="aboutSection" class="container aboutSection">
+    <h1 class="textWeight100 uppercase">About</h1>
+</section>
+
+<section id="contactUsSection" class="container contactUsSection">
+    <h1 class="textWeight100 uppercase" style="color: var(--gold);">Contact</h1>
+</section>
+
+<nav id="footerNav" class="navbar footer">
+    <div style="width: 100%">
+        <h4 class="uppercase">&copy; 2026. Moon & Melody. All rights reserved</h4>
+    </div>
+</nav>
+
 <script src="js/main.js"></script>
-</body></html>
+<script src="js/carousel.js"></script>
+</body>
+
+</html>
