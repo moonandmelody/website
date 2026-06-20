@@ -42,7 +42,7 @@ prevBtn.addEventListener('click', () => {
     }
 });
 
-setInterval(autoscroll,5000);
+setInterval(autoscroll,10000);
 
 function autoscroll(){
     nextBtn.click();
