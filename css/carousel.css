@@ -8,6 +8,16 @@
     height:100%;
 }
 
+.collection-carousel-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    top: 0;
+    height:95%;
+}
+
 /* Horizontal track container utilizing flexbox */
 .carousel-track {
     display: flex;
@@ -43,7 +53,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: white;
+    background-color: var(--gold);
     color: var(--navy);
     border: none;
     padding: 15px;
@@ -54,11 +64,37 @@
     transition: background-color 0.3s;
     width: 50px;
     height: 50px;
-    opacity: 0.2;
+    opacity: 0.4;
 }
 
 .carousel-btn:hover {
     background-color: var(--gold);
+    transition: background-color 0.3s;
+    color: white;
+    opacity: 1;
+}
+
+/* Styling the control overlays */
+.collection-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--navy);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    width: 50px;
+    height: 50px;
+    opacity: 0.4;
+}
+
+.collection-carousel-btn:hover {
+    background-color: var(--navy);
     transition: background-color 0.3s;
     color: white;
     opacity: 1;
@@ -100,5 +136,20 @@
 /* Active dot styling */
 .dot.active {
     background-color: #ffffff; /* Solid white */
+    transform: scale(1.2);    /* Slightly larger to stand out */
+}
+
+.featuredCollectionDot {
+    width: 5px;
+    height: 5px;
+    background-color: rgba(6, 22, 39, 0.5); /* Semi-transparent */
+    border-radius: 50%; /* Perfect circle */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Active dot styling */
+.featuredCollectionDot.active {
+    background-color: var(--navy); /* Solid white */
     transform: scale(1.2);    /* Slightly larger to stand out */
 }

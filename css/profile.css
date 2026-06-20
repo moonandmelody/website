@@ -1,0 +1,102 @@
+/* 1. Creates a 3D environment for the card to sit in */
+:root{
+    --premium-white: #FCFCFC;
+    --premium-white-border: #E2E8F0;
+}
+.card-perspective {
+    perspective: 1000px;
+    width: fit-content;
+    margin: 40px 100px;
+}
+
+/* 2. Main Visiting Card Box */
+.visiting-card {
+    width: 320px;               /* Tall, narrow visiting card aspect ratio */
+    min-height: 550px;
+    background: #fcfcfc;        /* Premium paper off-white color */
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;         /* Subtle corner rounding, mimicking cut paper */
+    position: relative;
+    overflow: hidden;
+    font-family: 'Montserrat',serif;
+
+    /* Layered shadow system: provides ambient drop + crisp close shadow */
+    box-shadow:
+            0 1px 3px rgba(0, 0, 0, 0.1),
+            0 10px 20px rgba(0, 0, 0, 0.12),
+            0 2px 5px rgba(0, 0, 0, 0.05);
+
+    /* Prepares the smooth 3D tilting motion transition */
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    box-shadow 0.4s ease;
+    transform-style: preserve-3d;
+}
+
+/* 3. Hover State: Lifts up and tilts forward toward the viewer */
+.visiting-card:hover {
+    /* Deepens and widens the drop shadow on hover to mimic physical lift */
+    box-shadow:
+            0 20px 38px rgba(0, 0, 0, 0.15),
+            0 15px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Image Presentation */
+.profile-image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px; /* Slightly rounded square instead of full circle */
+    object-fit: contain;
+    border: 1px solid var(--premium-white-border);
+    background-color: var(--premium-white);
+    padding: 4px; /* Creates a clean matting border effect around the photo */
+}
+
+/* Typography & Internal Layout */
+.profile-info {
+    padding: 25px 30px;
+    text-align: center;
+}
+
+.profile-name {
+    margin: 0;
+    color: var(--navy);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.profile-title {
+    margin: 10px 0 0 0;
+    color: var(--gold); /* Accent color matching top stripe */
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* Structural Card Divider Rule */
+.card-divider {
+    width: 40px;
+    height: 2px;
+    background-color: var(--premium-white-border);
+    margin: 20px auto;
+}
+
+.profile-bio {
+    margin: 0;
+    color: var(--navy);
+    font-size: 0.88rem;
+    line-height: 1.7; /* Generous text leading for excellent readability */
+    text-align: justify; /* Gives it a formal, printed look */
+}
+
+.card-display{
+    display: flex;
+    justify-content: center;
+}

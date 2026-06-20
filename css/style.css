@@ -12,6 +12,10 @@ Gold hexcode: ac7e44
     --brown:#6B4F4F;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     margin:0;
     background:var(--ivory);
@@ -39,6 +43,7 @@ body{
     gap:24px;
     list-style:none;
     align-items: center;
+    font-size: 16px;
 }
 
 .navbar li{
@@ -85,8 +90,29 @@ body{
     flex-direction: column;
 }
 
+.collection-hero-inner-left{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.collection-hero-inner-right{
+    height: 100%;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .container{
     padding:10px 5%
+}
+
+.collectionContainer{
+    padding:10px 0 0 0;
 }
 
 .logo, h1, h2, h3 {
@@ -143,17 +169,21 @@ body{
 }
 
 .ourStorySection{
-    background-color: white;
-    height:50vh
-}
-
-.featuredCollectionSection{
     background-color: var(--ivory);
     height:50vh
 }
 
-.aboutSection{
+.ourStoryExpandedSection{
+    background-color: var(--ivory);
+    height:30vh
+}
+
+.featuredCollectionSection{
     background-color: white;
+}
+
+.foundersSection{
+    background-color: var(--ivory);
     height:50vh
 }
 
@@ -197,5 +227,159 @@ body{
     display: flex;
     justify-content: center;
     font-weight: 200;
+    color: var(--navy);
+}
+
+.navbar.scrolled {
+    /* 1. Shrinks width slightly and indents from screen edges to look floating */
+    width: auto;
+    left: 3%;
+    background-color: rgba(246, 240, 234, 0.90);
+    backdrop-filter: blur(8px); /* Modern blurred glass transparency */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    /* 2. Pushes the header vertically closer to the viewer's eye */
+    transform: translateZ(20px);
+
+    /* 3. Deep, multi-layered real-world shadow simulating physical desk lift */
+    box-shadow:
+            0 1px 1px rgba(0, 0, 0, 0.05),
+            0 4px 8px rgba(0, 0, 0, 0.04),
+            0 16px 32px rgba(0, 0, 0, 0.08),
+            0 30px 60px rgba(0, 0, 0, 0.05);
+}
+
+.ourStoryExpand{
+    position: relative;
+    top: 80%;
+    left: 50%;
+    transform: rotate(-90deg);
+    color: var(--navy);
+    border: none;
+    padding: 0 15px 0 0;
+    cursor: pointer;
+    font-size: 30px;
+    z-index: 1;
+    /*border-radius: 50%;*/
+    background-color: var(--ivory);
+    transition: all 0.5s ease;
+    width: 50px;
+    height: 50px;
+    /*opacity: 0.2;*/
+}
+
+.ourStoryExpandClose{
+    position: relative;
+    top: 142%;
+    left: 50%;
+    transform: rotate(90deg);
+    color: var(--navy);
+    border: none;
+    padding: 0 15px 0 0;
+    cursor: pointer;
+    font-size: 30px;
+    z-index: 1;
+    /*border-radius: 50%;*/
+    background-color: white;
+    transition: all 0.5s ease;
+    width: 50px;
+    height: 50px;
+    /*opacity: 0.2;*/
+}
+
+.ourStoryExpandedSection{
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease, visibility 0.5s;
+}
+
+.ourStoryExpandedSection.show{
+    opacity: 1;
+    visibility: visible;
+    max-height: 30vh;
+}
+
+/* Teammate name animator css */
+.teammate-pill {
+    display: inline-flex;       /* Keeps the div compact and snug around text */
+    align-items: center;
+    padding: 10px 24px;         /* Uniform starting padding */
+    border-radius: 30px;        /* Smooth, pill-shaped rounded edges */
+    font-family: 'Montserrat',serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    /* Restricts structural warping; ensures pixel shifts animate smoothly */
+    max-width: 150px;
+    white-space: nowrap;        /* Stops text from wrapping to a second line */
+    overflow: hidden;           /* Keeps hidden components masked */
+
+    /* Orchestrates the expansion speed */
+    transition: max-width 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+    background-color 0.3s ease;
+}
+
+/* 1. Teammate Name Behavior */
+.teammate-name {
+    transition: color 0.3s ease;
+}
+
+/* 2. Central Separator Behavior */
+.pill-divider {
+    height: 16px;
+    width: 2px;
+    background-color: var(--gold);  /* Vibrant blue accent color */
+
+    /* Start completely hidden and collapsed */
+    opacity: 0;
+    max-width: 0;
+    margin: 0;
+
+    transition: opacity 0.3s ease,
+    max-width 0.4s ease,
+    margin 0.4s ease;
+}
+
+/* 3. Meaning Text Behavior */
+.teammate-meaning {
+    color: var(--navy);             /* Muted gray text color */
+    font-size: 0.9rem;
+    font-weight: 400;
+
+    /* Start completely hidden and collapsed */
+    opacity: 0;
+    max-width: 0;
+
+    transition: opacity 0.3s ease,
+    max-width 0.5s ease;
+}
+
+/* ==========================================
+   THE HOVER ACTIONS (The Animation Sequence)
+   ========================================== */
+
+.teammate-pill:hover {
+    /* Safely expands the small container width to reveal all text elements */
+    max-width: 400px;
+}
+
+/* On hover, reveal the central vertical divider line */
+.teammate-pill:hover .pill-divider {
+    opacity: 1;
+    max-width: 2px;
+    margin: 0 14px;            /* Smoothly pushes the name left and meaning right */
+}
+
+/* On hover, reveal the name meaning text field */
+.teammate-pill:hover .teammate-meaning {
+    opacity: 1;
+    max-width: 200px;          /* Gives text enough room to fade inward */
+}
+
+/* Optional: Changes name color on active hover state */
+.teammate-pill:hover .teammate-name {
     color: var(--navy);
 }

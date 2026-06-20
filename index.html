@@ -2,9 +2,14 @@
 <html lang="EN"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Served to browsers set to light mode -->
+    <link rel="icon" type="image/x-icon" href="images/darkLogo.png" media="(prefers-color-scheme: light)" />
+    <!-- Served to browsers set to dark mode -->
+    <link rel="icon" type="image/x-icon" href="images/lightLogo.png" media="(prefers-color-scheme: dark)" />
     <title>Moon & Melody</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/carousel.css" />
+    <link rel="stylesheet" href="css/profile.css" />
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
@@ -19,11 +24,11 @@
     </div>
 
     <ul>
-        <li><a href="index.html" class="uppercase padding">Home</a></li>
-        <li><a href="#" class="uppercase padding">Our Story</a></li>
-        <li><a href="#" class="uppercase padding">Collections</a></li>
-        <li><a href="#" class="uppercase padding">About</a></li>
-        <li><a href="#" class="uppercase padding">Contact</a></li>
+        <li><a href="javascript:navigateTo('home');" class="uppercase padding">Home</a></li>
+        <li><a href="javascript:navigateTo('ourStorySection');" class="uppercase padding">Our Story</a></li>
+        <li><a href="javascript:navigateTo('featuredCollectionSection');" class="uppercase padding">Collections</a></li>
+        <li><a href="javascript:navigateTo('foundersSection');" class="uppercase padding">Founders</a></li>
+        <li><a href="javascript:navigateTo('contactUsSection');" class="uppercase padding">Contact</a></li>
     </ul>
 </nav>
 
@@ -35,7 +40,7 @@
 
         <!-- Slide Track -->
         <div class="carousel-div">
-            <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-track" id="homeCarouselTrack">
                 <div class="carousel-slide">
                     <div class="hero-inner-left">
                         <img src="images/primaryLogo.png" alt="primaryLogo" class="primaryLogoHeight40">
@@ -77,7 +82,7 @@
                 </div>
             </div>
         </div>
-        <div class="carousel-indicators" id="carouselIndicators">
+        <div class="carousel-indicators" id="homeCarouselIndicators">
             <span class="dot active" data-index="0"></span>
             <span class="dot" data-index="1"></span>
             <span class="dot" data-index="2"></span>
@@ -87,14 +92,126 @@
 
 <section id="ourStorySection" class="container ourStorySection">
     <h1 class="textWeight100 uppercase">Our Story</h1>
+    <button class="ourStoryExpand" title="Expand to know more..." id="ourStoryExpandButton">&#10094;</button>
 </section>
+
+<section id="ourStoryExpandedSection" class="container ourStoryExpandedSection"></section>
 
 <section id="featuredCollectionSection" class="container featuredCollectionSection">
-    <h1 class="textWeight100 uppercase">Collections</h1>
+    <h1 class="textWeight100 uppercase" style="color: var(--gold);">Collections</h1>
 </section>
+<div class="hero" style="background-color: white;">
+    <div class="collection-carousel-container">
+        <!-- Navigation Buttons -->
+        <button class="collection-carousel-btn prev" id="collectionPrevBtn">&#10094;</button>
+        <button class="collection-carousel-btn next" id="collectionNextBtn">&#10095;</button>
 
-<section id="aboutSection" class="container aboutSection">
-    <h1 class="textWeight100 uppercase">About</h1>
+        <!-- Slide Track -->
+        <div class="carousel-div">
+            <div class="carousel-track" id="collectionCarouselTrack">
+                <div class="carousel-slide">
+                    <div class="collection-hero-inner-left">
+                        <div>
+                            <h1 class="textWeight100 uppercase questionClass" style="color: var(--gold)">What is <br/>Moon & Melody?</h1>
+                        </div>
+                        <div>
+                            <h3 class="textWeight100 answerClass">It is a concept kitchen</h3>
+                        </div>
+                    </div>
+                    <div class="collection-hero-inner-right">
+                        <img src="images/primaryLogo.png" alt="primaryLogo" class="primaryLogoHeight40">
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="collection-hero-inner-left">
+                        <div>
+                            <h1 class="textWeight100 uppercase questionClass" style="color: var(--gold)">What is <br/>Moon & Melody?</h1>
+                        </div>
+                        <div>
+                            <h3 class="textWeight100 answerClass">It is a concept kitchen 1</h3>
+                        </div>
+                    </div>
+                    <div class="collection-hero-inner-right">
+                        <img src="images/primaryLogo.png" alt="primaryLogo" class="primaryLogoHeight40">
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="collection-hero-inner-left">
+                        <div>
+                            <h1 class="textWeight100 uppercase questionClass" style="color: var(--gold)">What is <br/>Moon & Melody?</h1>
+                        </div>
+                        <div>
+                            <h3 class="textWeight100 answerClass">It is a concept kitchen 2</h3>
+                        </div>
+                    </div>
+                    <div class="collection-hero-inner-right">
+                        <img src="images/primaryLogo.png" alt="primaryLogo" class="primaryLogoHeight40">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-indicators" id="collectionCarouselIndicators">
+            <span class="featuredCollectionDot active" data-index="0"></span>
+            <span class="featuredCollectionDot" data-index="1"></span>
+            <span class="featuredCollectionDot" data-index="2"></span>
+        </div>
+    </div>
+</div>
+
+<section id="teamSection" class="container teamSection" style="height: auto;">
+    <h1 class="textWeight100 uppercase">Founders</h1>
+    <!-- Profile card -->
+    <div class="card-display">
+        <div class="card-perspective">
+            <article class="visiting-card">
+                <!-- Profile Picture (Square with rounded corners) -->
+                <div class="profile-image-wrapper">
+                    <img src="images/productNameAndTagline.png" alt="Jane Doe" class="profile-img">
+                </div>
+
+                <!-- Card Info -->
+                <div class="profile-info">
+                    <div class="teammate-pill">
+                        <h2 class="profile-name">Shravya</h2>
+                        <span class="pill-divider"></span>
+                        <span class="teammate-meaning uppercase">Melody</span>
+                    </div>
+                    <p class="profile-title">Founder</p>
+
+                    <!-- Divider element -->
+                    <div class="card-divider"></div>
+
+                    <p class="profile-bio">
+                        She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                    </p>
+                </div>
+            </article>
+        </div>
+        <div class="card-perspective">
+            <article class="visiting-card">
+                <!-- Profile Picture (Square with rounded corners) -->
+                <div class="profile-image-wrapper">
+                    <img src="images/productNameAndTagline.png" alt="Jane Doe" class="profile-img">
+                </div>
+
+                <!-- Card Info -->
+                <div class="profile-info">
+                    <div class="teammate-pill">
+                        <h2 class="profile-name teammate-name">Shashank</h2>
+                        <span class="pill-divider"></span>
+                        <span class="teammate-meaning uppercase">Moon</span>
+                    </div>
+                    <p class="profile-title">Co-Founder</p>
+                    <!-- Divider element -->
+                    <div class="card-divider"></div>
+
+                    <p class="profile-bio">
+                        Jane handles cross-platform interaction design. She crafts clean design systems, leads structural web prototyping, and manages architectural front-end implementations.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </div>
 </section>
 
 <section id="contactUsSection" class="container contactUsSection">
@@ -103,7 +220,7 @@
 
 <nav id="footerNav" class="navbar footer">
     <div style="width: 100%">
-        <h4 class="uppercase">&copy; 2026. Moon & Melody. All rights reserved</h4>
+        <h4 class="uppercase">&copy; 2026. Moon & Melody. All rights reserved.</h4>
     </div>
 </nav>
 
