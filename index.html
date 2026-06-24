@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/profile.css" />
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -27,10 +27,232 @@
         <li><a href="javascript:navigateTo('home');" class="uppercase padding">Home</a></li>
         <li><a href="javascript:navigateTo('ourStorySection');" class="uppercase padding">Our Story</a></li>
         <li><a href="javascript:navigateTo('featuredCollectionSection');" class="uppercase padding">Collections</a></li>
+        <li><a href="javascript:void('0');" class="uppercase padding" id="openMenu">Menu</a></li>
         <li><a href="javascript:navigateTo('foundersSection');" class="uppercase padding">Founders</a></li>
         <li><a href="javascript:navigateTo('contactUsSection');" class="uppercase padding">Contact</a></li>
     </ul>
 </nav>
+
+<div class="menu-overlay" id="menuOverlay">
+    <!-- Top bar holding the close button -->
+    <div class="overlay-header" id="menuHeader">
+        <button class="close-btn" id="closeMenu">&times;</button>
+        <div class="menuDiv" id="menuDiv">
+            <h1 class="textWeight100 uppercase sliding-menu-title" style="color: var(--navy)">Menu</h1>
+        </div>
+    </div>
+    <!-- Scrollable container for menu images -->
+    <div class="overlay-body" id="overlayBody">
+        <div id="signatureItems" class="signatureItems boxShadow">
+            <div>
+                <h2 class="uppercase" style="color: var(--ivory);">Sipping Chocolate</h2>
+            </div>
+            <div style="display: flex;justify-content: center;gap: 10px;">
+                <article class="itemCard">
+                    <div class="itemCard-image-div">
+                        <img src="images/darkChocolate.png" alt="dark chocolate" class="itemCard-image-div-img">
+                    </div>
+                    <div class="item-info">
+                        <div>
+                            <h2 class="item-name">Midnight Luxe</h2>
+                        </div>
+                        <p class="item-title">Dark Chocolate</p>
+                        <p class="item-bio">
+                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                        </p>
+                    </div>
+                </article>
+                <article class="itemCard">
+                    <div class="itemCard-image-div">
+                        <img src="images/whiteChocolate.png" alt="white chocolate" class="itemCard-image-div-img">
+                    </div>
+                    <div class="item-info">
+                        <div>
+                            <h2 class="item-name">Moondance</h2>
+                        </div>
+                        <p class="item-title">White Chocolate</p>
+                        <p class="item-bio">
+                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                        </p>
+                    </div>
+                </article>
+                <article class="itemCard">
+                    <div class="itemCard-image-div">
+                        <img src="images/darkChocolate.png" alt="dark chocolate vegan" class="itemCard-image-div-img">
+                    </div>
+                    <div class="item-info">
+                        <div>
+                            <h2 class="item-name">Midnight Luxe - Vegan</h2>
+                        </div>
+                        <p class="item-title">Vegan Dark Chocolate</p>
+                        <p class="item-bio">
+                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <div class="statutoryDiv">
+                <span class="statutory" style="color:white">*Images are for illustration purpose only. Real product might look different.</span>
+            </div>
+        </div>
+        <div id="gourmetItems" class="gourmetItems boxShadow">
+            <div>
+                <h2 class="uppercase" style="color: var(--gold);">Gourmet Teas</h2>
+            </div>
+            <div style="display: flex;justify-content: center;gap: 10px;">
+                <article class="itemCard">
+                    <div class="itemCard-image-div">
+                        <img src="images/darkChocolate.png" alt="dark chocolate" class="itemCard-image-div-img">
+                    </div>
+                    <div class="item-info">
+                        <div>
+                            <h2 class="item-name">Midnight Luxe</h2>
+                        </div>
+                        <p class="item-title">Dark Chocolate</p>
+                        <p class="item-bio">
+                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                        </p>
+                    </div>
+                </article>
+                <article class="itemCard">
+                    <div class="itemCard-image-div">
+                        <img src="images/whiteChocolate.png" alt="white chocolate" class="itemCard-image-div-img">
+                    </div>
+                    <div class="item-info">
+                        <div>
+                            <h2 class="item-name">Moondance</h2>
+                        </div>
+                        <p class="item-title">White Chocolate</p>
+                        <p class="item-bio">
+                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                        </p>
+                    </div>
+                </article>
+                <article class="itemCard">
+                    <div class="itemCard-image-div">
+                        <img src="images/darkChocolate.png" alt="dark chocolate vegan" class="itemCard-image-div-img">
+                    </div>
+                    <div class="item-info">
+                        <div>
+                            <h2 class="item-name">Midnight Luxe - Vegan</h2>
+                        </div>
+                        <p class="item-title">Vegan Dark Chocolate</p>
+                        <p class="item-bio">
+                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <div class="statutoryDiv">
+                <span class="statutory" style="color:var(--navy)">*Images are for illustration purpose only. Real product might look different.</span>
+            </div>
+        </div>
+        <div id="bakedItems" class="bakedItems boxShadow">
+            <div>
+                <h2 class="uppercase" style="color: var(--navy);">Baked Delights</h2>
+            </div>
+            <div style="display: flex;justify-content: center;gap: 10px;">
+                <article class="itemCard">
+                    <div class="itemCard-image-div">
+                        <img src="images/darkChocolate.png" alt="dark chocolate" class="itemCard-image-div-img">
+                    </div>
+                    <div class="item-info">
+                        <div>
+                            <h2 class="item-name">Midnight Luxe</h2>
+                        </div>
+                        <p class="item-title">Dark Chocolate</p>
+                        <p class="item-bio">
+                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                        </p>
+                    </div>
+                </article>
+                <article class="itemCard">
+                    <div class="itemCard-image-div">
+                        <img src="images/whiteChocolate.png" alt="white chocolate" class="itemCard-image-div-img">
+                    </div>
+                    <div class="item-info">
+                        <div>
+                            <h2 class="item-name">Moondance</h2>
+                        </div>
+                        <p class="item-title">White Chocolate</p>
+                        <p class="item-bio">
+                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                        </p>
+                    </div>
+                </article>
+                <article class="itemCard">
+                    <div class="itemCard-image-div">
+                        <img src="images/darkChocolate.png" alt="dark chocolate vegan" class="itemCard-image-div-img">
+                    </div>
+                    <div class="item-info">
+                        <div>
+                            <h2 class="item-name">Midnight Luxe - Vegan</h2>
+                        </div>
+                        <p class="item-title">Vegan Dark Chocolate</p>
+                        <p class="item-bio">
+                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <div class="statutoryDiv">
+                <span class="statutory" style="color:var(--ivory)">*Images are for illustration purpose only. Real product might look different.</span>
+            </div>
+        </div>
+        <div id="addOnItems" class="addOnItems boxShadow">
+            <div>
+                <h2 class="uppercase" style="color: white;">Add-Ons</h2>
+            </div>
+            <div style="display: flex;justify-content: center;gap: 10px;">
+                <article class="itemCard">
+                    <div class="itemCard-image-div">
+                        <img src="images/darkChocolate.png" alt="dark chocolate" class="itemCard-image-div-img">
+                    </div>
+                    <div class="item-info">
+                        <div>
+                            <h2 class="item-name">Midnight Luxe</h2>
+                        </div>
+                        <p class="item-title">Dark Chocolate</p>
+                        <p class="item-bio">
+                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                        </p>
+                    </div>
+                </article>
+                <article class="itemCard">
+                    <div class="itemCard-image-div">
+                        <img src="images/whiteChocolate.png" alt="white chocolate" class="itemCard-image-div-img">
+                    </div>
+                    <div class="item-info">
+                        <div>
+                            <h2 class="item-name">Moondance</h2>
+                        </div>
+                        <p class="item-title">White Chocolate</p>
+                        <p class="item-bio">
+                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                        </p>
+                    </div>
+                </article>
+                <article class="itemCard">
+                    <div class="itemCard-image-div">
+                        <img src="images/darkChocolate.png" alt="dark chocolate vegan" class="itemCard-image-div-img">
+                    </div>
+                    <div class="item-info">
+                        <div>
+                            <h2 class="item-name">Midnight Luxe - Vegan</h2>
+                        </div>
+                        <p class="item-title">Vegan Dark Chocolate</p>
+                        <p class="item-bio">
+                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                        </p>
+                    </div>
+                </article>
+            </div>
+            <div class="statutoryDiv">
+                <span class="statutory" style="color:white">*Images are for illustration purpose only. Real product might look different.</span>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div id="" class="hero">
     <div class="carousel-container">
