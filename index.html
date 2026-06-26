@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="css/profile.css" />
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -45,51 +44,128 @@
     <div class="overlay-body" id="overlayBody">
         <div id="signatureItems" class="signatureItems boxShadow">
             <div>
-                <h2 class="uppercase" style="color: var(--ivory);">Sipping Chocolate</h2>
+                <h2 class="uppercase category-heading" style="color: var(--ivory);">Sipping Chocolate</h2>
             </div>
-            <div style="display: flex;justify-content: center;gap: 10px;">
-                <article class="itemCard">
-                    <div class="itemCard-image-div">
-                        <img src="images/darkChocolate.png" alt="dark chocolate" class="itemCard-image-div-img">
-                    </div>
-                    <div class="item-info">
-                        <div>
-                            <h2 class="item-name">Midnight Luxe</h2>
+            <div class="menu-carousel-container signature">
+                <button class="menu-carousel-btn menu-prev" id="signaturePrevBtn">&#10094;</button>
+                <button class="menu-carousel-btn menu-next" id="signatureNextBtn">&#10095;</button>
+                <div class="menu-carousel-div">
+                    <div class="menu-carousel-track" id="signatureCarouselTrack">
+                        <div class="menu-carousel-slide">
+                            <div style="display: flex;justify-content: center;gap: 30px;">
+                                <article class="itemCard">
+                                    <div class="itemCard-image-div">
+                                        <img src="images/darkChocolate.png" alt="dark chocolate" class="itemCard-image-div-img">
+                                    </div>
+                                    <div class="item-info">
+                                        <div>
+                                            <h2 class="item-name uppercase">Midnight Luxe</h2>
+                                        </div>
+                                        <p class="item-title">60% Dark Chocolate</p>
+                                        <p class="item-bio">
+                                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                                        </p>
+                                    </div>
+                                    <div class="price-info">
+                                        <span class="item-quantity">
+                                            Quantity 200 mL
+                                        </span>
+                                        <span class="item-price">
+                                            MRP &#8377;299/-
+                                        </span>
+                                    </div>
+                                </article>
+                                <article class="itemCard">
+                                    <div class="itemCard-image-div">
+                                        <img src="images/whiteChocolate.png" alt="white chocolate" class="itemCard-image-div-img">
+                                    </div>
+                                    <div class="item-info">
+                                        <div>
+                                            <h2 class="item-name uppercase">Moon Dance</h2>
+                                        </div>
+                                        <p class="item-title">White Chocolate</p>
+                                        <p class="item-bio">
+                                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                                        </p>
+                                        <p class="item-price">
+                                            MRP &#8377;339/-
+                                        </p>
+                                    </div>
+                                </article>
+                                <article class="itemCard">
+                                    <div class="itemCard-image-div">
+                                        <img src="images/darkChocolate.png" alt="dark chocolate vegan" class="itemCard-image-div-img">
+                                    </div>
+                                    <div class="item-info">
+                                        <div>
+                                            <h2 class="item-name uppercase">Midnight Luxe - Vegan</h2>
+                                        </div>
+                                        <p class="item-title">60% Vegan Dark Chocolate</p>
+                                        <p class="item-bio">
+                                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                                        </p>
+                                        <p class="item-price">
+                                            MRP &#8377;349/-
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
-                        <p class="item-title">Dark Chocolate</p>
-                        <p class="item-bio">
-                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
-                        </p>
-                    </div>
-                </article>
-                <article class="itemCard">
-                    <div class="itemCard-image-div">
-                        <img src="images/whiteChocolate.png" alt="white chocolate" class="itemCard-image-div-img">
-                    </div>
-                    <div class="item-info">
-                        <div>
-                            <h2 class="item-name">Moondance</h2>
+                        <div class="menu-carousel-slide">
+                            <div style="display: flex;justify-content: center;gap: 30px;">
+                                <article class="itemCard">
+                                    <div class="itemCard-image-div">
+                                        <img src="images/darkChocolate.png" alt="dark chocolate" class="itemCard-image-div-img">
+                                    </div>
+                                    <div class="item-info">
+                                        <div>
+                                            <h2 class="item-name uppercase">Luxe Symphony</h2>
+                                        </div>
+                                        <p class="item-title">2 x Midnight Luxe</p>
+                                        <p class="item-price">
+                                            Regular: &#8377;559/-<br/>
+                                            Vegan: &#8377;659/-
+                                        </p>
+                                    </div>
+                                </article>
+                                <article class="itemCard">
+                                    <div class="itemCard-image-div">
+                                        <img src="images/whiteChocolate.png" alt="white chocolate" class="itemCard-image-div-img">
+                                    </div>
+                                    <div class="item-info">
+                                        <div>
+                                            <h2 class="item-name uppercase">Ebony & Ivory</h2>
+                                        </div>
+                                        <p class="item-title">1 x Midnight Luxe <br/> 1 x Moon Dance</p>
+                                        <p class="item-price">
+                                            Regular &#8377;599/-<br/>
+                                            Vegan Midnight Luxe & Regular Moon Dance &#8377;669/-
+                                        </p>
+                                    </div>
+                                </article>
+                                <article class="itemCard">
+                                    <div class="itemCard-image-div">
+                                        <img src="images/darkChocolate.png" alt="dark chocolate vegan" class="itemCard-image-div-img">
+                                    </div>
+                                    <div class="item-info">
+                                        <div>
+                                            <h2 class="item-name uppercase">Dark of the Moon</h2>
+                                        </div>
+                                        <p class="item-title">2 x Midnight Luxe <br/> 1 x Moon Dance</p>
+                                        <p class="item-bio">
+                                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                                        </p>
+                                        <p class="item-price">
+                                            MRP &#8377;349/-
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
                         </div>
-                        <p class="item-title">White Chocolate</p>
-                        <p class="item-bio">
-                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
-                        </p>
-                    </div>
-                </article>
-                <article class="itemCard">
-                    <div class="itemCard-image-div">
-                        <img src="images/darkChocolate.png" alt="dark chocolate vegan" class="itemCard-image-div-img">
-                    </div>
-                    <div class="item-info">
-                        <div>
-                            <h2 class="item-name">Midnight Luxe - Vegan</h2>
+                        <div class="menu-carousel-slide">
                         </div>
-                        <p class="item-title">Vegan Dark Chocolate</p>
-                        <p class="item-bio">
-                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
-                        </p>
                     </div>
-                </article>
+                </div>
             </div>
             <div class="statutoryDiv">
                 <span class="statutory" style="color:white">*Images are for illustration purpose only. Real product might look different.</span>
@@ -97,9 +173,9 @@
         </div>
         <div id="gourmetItems" class="gourmetItems boxShadow">
             <div>
-                <h2 class="uppercase" style="color: var(--gold);">Gourmet Teas</h2>
+                <h2 class="uppercase category-heading" style="color: var(--gold);">Gourmet Teas</h2>
             </div>
-            <div style="display: flex;justify-content: center;gap: 10px;">
+            <div style="display: flex;justify-content: center;gap: 30px;">
                 <article class="itemCard">
                     <div class="itemCard-image-div">
                         <img src="images/darkChocolate.png" alt="dark chocolate" class="itemCard-image-div-img">
@@ -149,9 +225,9 @@
         </div>
         <div id="bakedItems" class="bakedItems boxShadow">
             <div>
-                <h2 class="uppercase" style="color: var(--navy);">Baked Delights</h2>
+                <h2 class="uppercase category-heading" style="color: var(--navy);">Baked Delights</h2>
             </div>
-            <div style="display: flex;justify-content: center;gap: 10px;">
+            <div style="display: flex;justify-content: center;gap: 30px;">
                 <article class="itemCard">
                     <div class="itemCard-image-div">
                         <img src="images/darkChocolate.png" alt="dark chocolate" class="itemCard-image-div-img">
@@ -201,9 +277,9 @@
         </div>
         <div id="addOnItems" class="addOnItems boxShadow">
             <div>
-                <h2 class="uppercase" style="color: white;">Add-Ons</h2>
+                <h2 class="uppercase category-heading" style="color: white;">Add-Ons</h2>
             </div>
-            <div style="display: flex;justify-content: center;gap: 10px;">
+            <div style="display: flex;justify-content: center;gap: 30px;">
                 <article class="itemCard">
                     <div class="itemCard-image-div">
                         <img src="images/darkChocolate.png" alt="dark chocolate" class="itemCard-image-div-img">

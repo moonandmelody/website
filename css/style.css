@@ -486,6 +486,10 @@ body{
     text-align: center;
 }
 
+.category-heading{
+    padding-left: 33px;
+}
+
 .signatureItems{
     margin: 15px 15px;
     background-color: var(--navy);
@@ -588,7 +592,7 @@ body{
 .item-name {
     margin: 0;
     color: var(--navy);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: -0.02em;
 }
@@ -608,6 +612,28 @@ body{
     font-size: 0.88rem;
     line-height: 1.7; /* Generous text leading for excellent readability */
     text-align: justify; /* Gives it a formal, printed look */
+}
+
+.item-price-heading {
+
+}
+
+.item-quantity {
+    margin: 50px 0 0 0;
+    color: var(--gold); /* Accent color matching top stripe */
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.item-price {
+    margin: 50px 0 0 0;
+    color: var(--gold); /* Accent color matching top stripe */
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
 .statutoryDiv{

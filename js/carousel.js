@@ -8,6 +8,10 @@ const  collectionPrevBtn = document.getElementById('collectionPrevBtn');
 const  collectionNextBtn = document.getElementById('collectionNextBtn');
 const  collectionDots = document.querySelectorAll('.featuredCollectionDot');
 
+const signatureTrack = document.getElementById("signatureCarouselTrack");
+const signaturePrevBtn = document.getElementById("signaturePrevBtn");
+const signatureNextBtn = document.getElementById("signatureNextBtn");
+
 // Function to update which dot highlights as active
 function updateIndicators() {
     const slideWidth = track.clientWidth;
@@ -123,4 +127,26 @@ collectionDots.forEach(dot => {
             behavior: 'smooth'
         });
     });
+});
+
+// Move track forward by the width of one slide
+signatureNextBtn.addEventListener('click', () => {
+    const slideWidth = signatureTrack.clientWidth;
+    // If at the end, loop back to start
+    if (signatureTrack.scrollLeft + slideWidth >= signatureTrack.scrollWidth) {
+        signatureTrack.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+        signatureTrack.scrollBy({ left: slideWidth, behavior: 'smooth' });
+    }
+});
+
+// Move track backward by the width of one slide
+signaturePrevBtn.addEventListener('click', () => {
+    const slideWidth = signatureTrack.clientWidth;
+    // If at the start, loop back to the end
+    if (signatureTrack.scrollLeft <= 0) {
+        signatureTrack.scrollTo({ left: signatureTrack.scrollWidth, behavior: 'smooth' });
+    } else {
+        signatureTrack.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+    }
 });

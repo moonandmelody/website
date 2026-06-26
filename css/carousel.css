@@ -18,6 +18,15 @@
     height:95%;
 }
 
+.menu-carousel-container{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    top: 0;
+}
+
 /* Horizontal track container utilizing flexbox */
 .carousel-track {
     display: flex;
@@ -26,6 +35,14 @@
     scroll-snap-type: x mandatory; /* Forces alignment hooks */
     scrollbar-width: none; /* Hides default scrollbar on Firefox */
     width:85%;
+}
+
+.menu-carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; /* Forces alignment hooks */
+    scrollbar-width: none; /* Hides default scrollbar on Firefox */
 }
 
 /* Hide scrollbars for Chrome, Safari, and Opera */
@@ -39,6 +56,11 @@
     scroll-snap-align: start; /* Tells slide where to snap */
     display: flex;
     justify-content: space-between;
+}
+
+.menu-carousel-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start; /* Tells slide where to snap */
 }
 
 .carousel-slide img {
@@ -71,6 +93,24 @@
     background-color: var(--gold);
     transition: background-color 0.3s;
     color: white;
+    opacity: 1;
+}
+
+.menu-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    width: 50px;
+    height: 50px;
     opacity: 1;
 }
 
@@ -109,8 +149,20 @@
     top: 0;
 }
 
+.menu-carousel-div{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height:100%;
+    position: relative;
+    top: 0;
+}
+
 .prev { left: 15px; }
 .next { right: 15px; }
+
+.menu-prev { left: -20px; }
+.menu-next { right: -20px; }
 
 /* Container for the dots */
 .carousel-indicators {
