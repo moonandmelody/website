@@ -8,9 +8,9 @@ const  collectionPrevBtn = document.getElementById('collectionPrevBtn');
 const  collectionNextBtn = document.getElementById('collectionNextBtn');
 const  collectionDots = document.querySelectorAll('.featuredCollectionDot');
 
-const signatureTrack = document.getElementById("signatureCarouselTrack");
-const signaturePrevBtn = document.getElementById("signaturePrevBtn");
-const signatureNextBtn = document.getElementById("signatureNextBtn");
+const  bakedCarouselTrack = document.getElementById('bakedCarouselTrack');
+const  bakedItemsPrevBtn = document.getElementById('bakedItemsPrevBtn');
+const  bakedItemsNextBtn = document.getElementById('bakedItemsNextBtn');
 
 // Function to update which dot highlights as active
 function updateIndicators() {
@@ -130,23 +130,23 @@ collectionDots.forEach(dot => {
 });
 
 // Move track forward by the width of one slide
-signatureNextBtn.addEventListener('click', () => {
-    const slideWidth = signatureTrack.clientWidth;
+bakedItemsNextBtn.addEventListener('click', () => {
+    const slideWidth = bakedCarouselTrack.clientWidth;
     // If at the end, loop back to start
-    if (signatureTrack.scrollLeft + slideWidth >= signatureTrack.scrollWidth) {
-        signatureTrack.scrollTo({ left: 0, behavior: 'smooth' });
+    if (bakedCarouselTrack.scrollLeft + slideWidth >= bakedCarouselTrack.scrollWidth) {
+        bakedCarouselTrack.scrollTo({ left: 0, behavior: 'smooth' });
     } else {
-        signatureTrack.scrollBy({ left: slideWidth, behavior: 'smooth' });
+        bakedCarouselTrack.scrollBy({ left: slideWidth, behavior: 'smooth' });
     }
 });
 
 // Move track backward by the width of one slide
-signaturePrevBtn.addEventListener('click', () => {
-    const slideWidth = signatureTrack.clientWidth;
+bakedItemsPrevBtn.addEventListener('click', () => {
+    const slideWidth = bakedCarouselTrack.clientWidth;
     // If at the start, loop back to the end
-    if (signatureTrack.scrollLeft <= 0) {
-        signatureTrack.scrollTo({ left: signatureTrack.scrollWidth, behavior: 'smooth' });
+    if (bakedCarouselTrack.scrollLeft <= 0) {
+        bakedCarouselTrack.scrollTo({ left: bakedCarouselTrack.scrollWidth, behavior: 'smooth' });
     } else {
-        signatureTrack.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+        bakedCarouselTrack.scrollBy({ left: -slideWidth, behavior: 'smooth' });
     }
 });

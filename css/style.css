@@ -548,7 +548,7 @@ body{
 }
 
 .itemCard {
-    width: 320px;               /* Tall, narrow visiting card aspect ratio */
+    width: 400px;               /* Tall, narrow visiting card aspect ratio */
     height: 500px;
     background: #fcfcfc;        /* Premium paper off-white color */
     border: 1px solid #e2e8f0;
@@ -572,16 +572,16 @@ body{
 .itemCard-image-div {
     display: flex;
     justify-content: center;
-    margin-top: 55px;
+    margin-top: 65px;
 }
 
 .itemCard-image-div-img {
-    width: 170px;
-    height: 170px;
+    width: 190px;
+    height: 180px;
     border-radius: 8px; /* Slightly rounded square instead of full circle */
-    object-fit: contain;
+    object-fit: cover;
     padding: 4px; /* Creates a clean matting border effect around the photo */
-    transform: scale(1.4);
+    transform: scale(1.5);
 }
 
 .item-info {
