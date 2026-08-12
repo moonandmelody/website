@@ -68,3 +68,15 @@ ourStoryExpandButton.addEventListener('click',() => {
     ourStoryExpandedSection.classList.toggle("show");
     ourStoryExpandButton.classList.toggle("ourStoryExpandClose");
 });
+
+document.getElementById('navToggle').addEventListener('click', function() {
+    const navMenu = document.getElementById('navMenu');
+    navMenu.classList.toggle('active');
+});
+
+// Optional: Close the menu automatically when a link is clicked
+document.querySelectorAll('#navMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById('navMenu').classList.remove('active');
+    });
+});
