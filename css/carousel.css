@@ -235,3 +235,63 @@
     background-color: var(--navy); /* Solid white */
     transform: scale(1.2);    /* Slightly larger to stand out */
 }
+
+@media (max-width: 768px) {
+    /* 1. Force the track to take full width so 100% slide sizing works perfectly */
+    .carousel-track,
+    .menu-carousel-track {
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+
+    /* 2. Switch horizontal slide layout to a clean vertical column stacked layout */
+    .carousel-slide {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px; /* Gives the text and logo safe breathing room */
+        box-sizing: border-box;
+    }
+
+    /* 3. Re-scale your container inner blocks to take full width */
+    .hero-inner-left,
+    .hero-inner-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* 4. Fix image dimensions so they don't break boundaries or overflow */
+    .carousel-slide img {
+        width: 60%;
+        height: auto;
+        margin-bottom: 20px; /* Adds clean spacing above your text strings */
+    }
+
+    /* 5. Scale down text sizes so long headlines don't spill over or overlap */
+    .questionClass {
+        font-size: 24px !important;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    .answerClass {
+        font-size: 16px !important;
+    }
+
+    /* 6. Fix your layout wrappers to handle mobile viewport sizing safely */
+    .menu-carousel-div {
+        padding-left: 0 !important;
+    }
+
+    /* 7. Hide desktop directional buttons completely on touch devices */
+    .carousel-btn,
+    .menu-carousel-btn,
+    .bakedItems-carousel-btn,
+    .collection-carousel-btn {
+        display: none !important;
+    }
+}
