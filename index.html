@@ -3,16 +3,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <!-- Served to browsers set to light mode -->
-    <link rel="icon" type="image/x-icon" href="images/darkLogo.png" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/x-icon" href="images/darkLogo.webp" media="(prefers-color-scheme: light)" />
     <!-- Served to browsers set to dark mode -->
-    <link rel="icon" type="image/x-icon" href="images/lightLogo.png" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/x-icon" href="images/lightLogo.webp" media="(prefers-color-scheme: dark)" />
     <title>Moon & Melody</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/carousel.css" />
     <link rel="stylesheet" href="css/profile.css" />
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" >
 </head>
 <body>
 <div id="pageLoader" class="loader-overlay">
@@ -33,9 +33,9 @@
     <ul class="nav-menu" id="navMenu">
         <li><a href="javascript:navigateTo('home');" class="uppercase padding">Home</a></li>
         <li><a href="javascript:navigateTo('ourStorySection');" class="uppercase padding">Our Story</a></li>
-        <li><a href="javascript:navigateTo('featuredCollectionSection');" class="uppercase padding">Collections</a></li>
+        <!--<li><a href="javascript:navigateTo('featuredCollectionSection');" class="uppercase padding">Collections</a></li>-->
         <li><a href="javascript:void('0');" class="uppercase padding" id="openMenu">Menu</a></li>
-        <li><a href="javascript:navigateTo('foundersSection');" class="uppercase padding">Founders</a></li>
+        <li><a href="javascript:navigateTo('teamSection');" class="uppercase padding">Founders</a></li>
         <li><a href="javascript:navigateTo('contactUsSection');" class="uppercase padding">Contact</a></li>
     </ul>
 </nav>
@@ -55,7 +55,7 @@
                 <h2 class="uppercase category-heading" style="color: var(--ivory);">Sipping Chocolate</h2>
             </div>
             <div class="menu-carousel-container signature">
-                <div style="display: flex;justify-content: center;gap: 30px;">
+                <div style="display: inline-flex;justify-content: center;gap: 30px;">
                     <article class="itemCard">
                         <div class="itemCard-image-div">
                             <img src="images/Midnight%20Luxe.jpeg" alt="dark chocolate" class="itemCard-image-div-img">
@@ -70,7 +70,7 @@
                             </p>
 
                             <p class="item-price">
-                                MRP &#8377;419/-
+                                MRP &#8377;359/-
                             </p>
                         </div>
                     </article>
@@ -87,7 +87,7 @@
                                 She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
                             </p>
                             <p class="item-price">
-                                MRP &#8377;339/-
+                                MRP &#8377;389/-
                             </p>
                         </div>
                     </article>
@@ -120,35 +120,60 @@
             <div>
                 <h2 class="uppercase category-heading" style="color: var(--gold);">Gourmet Tea & Coffee</h2>
             </div>
-            <div style="display: flex;justify-content: center;gap: 30px;">
-                <article class="itemCard">
-                    <div class="itemCard-image-div">
-                        <img src="images/Rose%20Tea.jpeg" alt="dark chocolate" class="itemCard-image-div-img">
-                    </div>
-                    <div class="item-info">
-                        <div>
-                            <h2 class="item-name"></h2>
+            <div class="menu-carousel-container gourmet">
+                <div style="display: inline-flex;justify-content: center;gap: 30px;">
+                    <article class="itemCard">
+                        <div class="itemCard-image-div">
+                            <img src="images/Rose%20Tea.jpeg" alt="dark chocolate" class="itemCard-image-div-img">
                         </div>
-                        <p class="item-title uppercase">Rose Tea</p>
-                        <p class="item-bio">
-                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
-                        </p>
-                    </div>
-                </article>
-                <article class="itemCard">
-                    <div class="itemCard-image-div">
-                        <img src="images/Biscoff%20Latte.jpeg" alt="white chocolate" class="itemCard-image-div-img">
-                    </div>
-                    <div class="item-info">
-                        <div>
-                            <h2 class="item-name"></h2>
+                        <div class="item-info">
+                            <div>
+                                <h2 class="item-name uppercase">Rose Tea</h2>
+                            </div>
+                            <p class="item-title uppercase">Without Milk - 200 ML</p>
+                            <p class="item-bio">
+                                She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                            </p>
+                            <p class="item-price">
+                                MRP &#8377;239/-
+                            </p>
                         </div>
-                        <p class="item-title uppercase">Biscoff Latte</p>
-                        <p class="item-bio">
-                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
-                        </p>
-                    </div>
-                </article>
+                    </article>
+                    <article class="itemCard">
+                        <div class="itemCard-image-div">
+                            <img src="images/Rose%20Tea.jpeg" alt="dark chocolate" class="itemCard-image-div-img">
+                        </div>
+                        <div class="item-info">
+                            <div>
+                                <h2 class="item-name uppercase">Rose Tea</h2>
+                            </div>
+                            <p class="item-title uppercase">With Milk - 200 ML</p>
+                            <p class="item-bio">
+                                She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                            </p>
+                            <p class="item-price">
+                                MRP &#8377;259/-
+                            </p>
+                        </div>
+                    </article>
+                    <article class="itemCard">
+                        <div class="itemCard-image-div">
+                            <img src="images/Biscoff%20Latte.jpeg" alt="white chocolate" class="itemCard-image-div-img">
+                        </div>
+                        <div class="item-info">
+                            <div>
+                                <h2 class="item-name uppercase">Biscoff Latte</h2>
+                            </div>
+                            <p class="item-title uppercase">200 ML</p>
+                            <p class="item-bio">
+                                She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                            </p>
+                            <p class="item-price">
+                                MRP &#8377;429/-
+                            </p>
+                        </div>
+                    </article>
+                </div>
             </div>
             <div class="statutoryDiv">
                 <span class="statutory" style="color:var(--navy)">*Images are for illustration purpose only. Real product might look different.</span>
@@ -164,46 +189,21 @@
                 <div class="menu-carousel-div">
                     <div class="menu-carousel-track" id="bakedCarouselTrack">
                         <div class="menu-carousel-slide">
-                            <div style="display: flex;justify-content: center;gap: 30px;">
+                            <div style="display: inline-flex;justify-content: center;gap: 30px;">
                                 <article class="itemCard">
                                     <div class="itemCard-image-div">
                                         <img src="images/Potato%20Pops.jpeg" alt="dark chocolate" class="itemCard-image-div-img">
                                     </div>
                                     <div class="item-info">
                                         <div>
-                                            <h2 class="item-name uppercase">Lunar Rosettes</h2>
+                                            <h2 class="item-name uppercase">Potato Swirls</h2>
                                         </div>
-                                        <p class="item-title">Baked Potato Pops</p>
+                                        <p class="item-title uppercase">12 SWIRLS</p>
                                         <p class="item-bio">
                                             She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
                                         </p>
-                                    </div>
-                                </article>
-                                <article class="itemCard">
-                                    <div class="itemCard-image-div">
-                                        <img src="images/Garlic%20Bread.jpeg" alt="white chocolate" class="itemCard-image-div-img">
-                                    </div>
-                                    <div class="item-info">
-                                        <div>
-                                            <h2 class="item-name uppercase">Nocturn Toasts</h2>
-                                        </div>
-                                        <p class="item-title">Cheesy Garlic Bread</p>
-                                        <p class="item-bio">
-                                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
-                                        </p>
-                                    </div>
-                                </article>
-                                <article class="itemCard">
-                                    <div class="itemCard-image-div">
-                                        <img src="images/Mini%20Croissant.jpeg" alt="dark chocolate vegan" class="itemCard-image-div-img">
-                                    </div>
-                                    <div class="item-info">
-                                        <div>
-                                            <h2 class="item-name uppercase">Twin Crescents</h2>
-                                        </div>
-                                        <p class="item-title">Mini Croissants (2)</p>
-                                        <p class="item-bio">
-                                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                                        <p class="item-price">
+                                            MRP &#8377;169/-
                                         </p>
                                     </div>
                                 </article>
@@ -213,11 +213,48 @@
                                     </div>
                                     <div class="item-info">
                                         <div>
-                                            <h2 class="item-name"></h2>
+                                            <h2 class="item-name uppercase">Bun Maska</h2>
                                         </div>
-                                        <p class="item-title uppercase">Bun Maska</p>
+                                        <p class="item-title uppercase">1 PIECE</p>
                                         <p class="item-bio">
                                             She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                                        </p>
+                                        <p class="item-price">
+                                            MRP &#8377;189/-
+                                        </p>
+                                    </div>
+                                </article>
+                                <article class="itemCard">
+                                    <div class="itemCard-image-div">
+                                        <img src="images/Mini%20Croissant.jpeg" alt="dark chocolate vegan" class="itemCard-image-div-img">
+                                    </div>
+                                    <div class="item-info">
+                                        <div>
+                                            <h2 class="item-name uppercase">Mini Croissants</h2>
+                                        </div>
+                                        <p class="item-title uppercase">2 PIECES</p>
+                                        <p class="item-bio">
+                                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                                        </p>
+                                        <p class="item-price">
+                                            MRP &#8377;219/-
+                                        </p>
+                                    </div>
+                                </article>
+                                <article class="itemCard">
+                                    <div class="itemCard-image-div">
+                                        <img src="images/Garlic%20Bread.jpeg" alt="white chocolate" class="itemCard-image-div-img">
+                                    </div>
+                                    <div class="item-info">
+                                        <div>
+                                            <h2 class="item-name uppercase">Sourdough Garlic Bread</h2>
+                                        </div>
+                                        <p class="item-title uppercase">4 SLICES</p>
+                                        <p class="item-bio">
+                                            She is the reason for you to go "Dammnnn!!" when you look at our brand. She runs the show
+                                        </p>
+                                        <p class="item-price">
+                                            MRP &#8377;349/-
                                         </p>
                                     </div>
                                 </article>
@@ -230,6 +267,7 @@
                 <span class="statutory" style="color:var(--ivory)">*Images are for illustration purpose only. Real product might look different.</span>
             </div>
         </div>
+        <!--
         <div id="addOnItems" class="addOnItems boxShadow">
             <div>
                 <h2 class="uppercase category-heading" style="color: white;">Add-Ons</h2>
@@ -282,6 +320,7 @@
                 <span class="statutory" style="color:white">*Images are for illustration purpose only. Real product might look different.</span>
             </div>
         </div>
+        -->
     </div>
 </div>
 
@@ -497,6 +536,18 @@
 
 <script src="js/main.js" defer></script>
 <script src="js/carousel.js" defer></script>
+
+<script>
+    window.addEventListener('load', function() {
+        const loader = document.getElementById('pageLoader');
+        if (loader) {
+            loader.classList.add('fade-out');
+            setTimeout(() => {
+                loader.remove();
+            }, 500);
+        }
+    });
+</script>
 </body>
 
 </html>
