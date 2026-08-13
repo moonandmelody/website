@@ -86,6 +86,7 @@ function updateCollectionIndicators() {
     });
 }
 
+/*
 collectionTrack.addEventListener('scroll', updateCollectionIndicators);
 
 // Move track forward by the width of one slide
@@ -128,6 +129,8 @@ collectionDots.forEach(dot => {
         });
     });
 });
+
+ */
 
 // Move track forward by the width of one slide
 bakedItemsNextBtn.addEventListener('click', () => {

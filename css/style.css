@@ -69,7 +69,7 @@ body{
 }
 
 .hero{
-    height:1000px;
+    height:500px;
     background: var(--navy);
     display:flex;
     align-items:center;
@@ -185,7 +185,7 @@ body{
 
 .ourStoryExpandedSection{
     background-color: white;
-    height:240px;
+    height:150px;
 }
 
 .featuredCollectionSection{
@@ -227,7 +227,7 @@ body{
 
 .footer{
     position: relative !important;
-    height: 500px;
+    height: 50px;
     color: var(--navy);
     font-weight: 300;
 }
@@ -282,7 +282,7 @@ body{
 .ourStoryExpandClose{
     position: absolute;
     bottom: 10px;
-    top: 147%;
+    top: 127%;
     left: 50%;
     transform: translateX(-50%) rotate(90deg);
     color: var(--navy);
@@ -659,14 +659,66 @@ body{
     font-family: 'Montserrat', serif;
 }
 
+.loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--ivory, #fdfbf7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999; /* Stands above sticky elements */
+    opacity: 0.7;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Hidden state wrapper utility class */
+.loader-overlay.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Logo container bounding properties */
+.loader-logo-wrapper {
+    max-width: 180px; /* Adjust this to size your logo nicely on the screen */
+    width: 40%;       /* Fluid scale sizing constraints on mobile views */
+    text-align: center;
+}
+
+/* Logo scaling rules and pulse animation trigger */
+.loader-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    animation: logoPulse 1.8s ease-in-out infinite;
+}
+
+/* Elegant breathing pulse animation */
+@keyframes logoPulse {
+    0% {
+        transform: scale(0.92);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.03);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.92);
+        opacity: 0.6;
+    }
+}
+
 /* --- MOBILE STYLES (Screens 768px wide or smaller) --- */
 @media (max-width: 768px) {
     .productNameAndTaglineHeader {
-        height: 40px;
+        height: 70px;
     }
 
     .secondaryLogoHeader {
-        height: 60px;
+        height: 90px;
     }
 
     .navbar {

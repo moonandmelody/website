@@ -15,7 +15,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-
+<div id="pageLoader" class="loader-overlay">
+    <div class="loader-logo-wrapper">
+        <img src="images/primaryLogo.png" alt="Moon & Melody Logo" class="loader-logo">
+    </div>
+</div>
 <nav id="headerNav" class="navbar">
     <div class="logo">
         <img src="images/secondaryLogo.png" alt="primary logo" class="secondaryLogoHeader positionRelative zIndex1">
@@ -296,7 +300,7 @@
                     </div>
                     <div class="hero-inner-right">
                         <div>
-                            <h1 class="textWeight100 uppercase questionClass" style="color: var(--gold)">What is <br/>Moon & Melody?</h1>
+                            <h1 class="textWeight100 uppercase questionClass" style="color: var(--gold)">What is Moon & Melody?</h1>
                         </div>
                         <div>
                             <h3 class="textWeight100 answerClass">It is a concept kitchen</h3>
@@ -305,7 +309,7 @@
                 </div>
                 <div class="carousel-slide">
                     <div class="hero-inner-left">
-                        <img src="images/primaryLogo.png" alt="primaryLogo" class="primaryLogoHeight40">
+                        <img src="images/primaryLogo.png" alt="primaryLogo" class="primaryLogoHeight40" loading="lazy">
                     </div>
                     <div class="hero-inner-right">
                         <div>
@@ -318,7 +322,7 @@
                 </div>
                 <div class="carousel-slide">
                     <div class="hero-inner-left">
-                        <img src="images/primaryLogo.png" alt="primaryLogo" class="primaryLogoHeight40">
+                        <img src="images/primaryLogo.png" alt="primaryLogo" class="primaryLogoHeight40" loading="lazy">
                     </div>
                     <div class="hero-inner-right">
                         <div>
@@ -491,8 +495,8 @@
     </div>
 </nav>
 
-<script src="js/main.js"></script>
-<script src="js/carousel.js"></script>
+<script src="js/main.js" defer></script>
+<script src="js/carousel.js" defer></script>
 </body>
 
 </html>

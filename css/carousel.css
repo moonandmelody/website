@@ -266,7 +266,7 @@
 
     /* 4. Fix image dimensions so they don't break boundaries or overflow */
     .carousel-slide img {
-        width: 60%;
+        width: 45%;
         height: auto;
         margin-bottom: 20px; /* Adds clean spacing above your text strings */
     }

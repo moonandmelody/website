@@ -19,6 +19,17 @@ function navigateTo(sectionName){
     }
 }
 
+window.addEventListener('load', function() {
+    const loader = document.getElementById('pageLoader');
+
+    loader.classList.add('fade-out');
+
+    // Completely remove the element from the DOM after the fade transition finishes
+    setTimeout(() => {
+        loader.remove();
+    }, 500); // Matches the 0.5s duration in your CSS transition setting
+});
+
 const openMenuBtn = document.getElementById('openMenu');
 const closeMenuBtn = document.getElementById('closeMenu');
 const menuOverlay = document.getElementById('menuOverlay');
