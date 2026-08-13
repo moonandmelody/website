@@ -759,30 +759,55 @@ body{
 
     .signatureItems {
         margin: 15px 0;
-        height: 620px;
         padding: 20px 25px;
     }
 
     .gourmetItems {
         margin: 15px 0;
-        height: 620px;
         padding: 20px 25px;
     }
 
     .bakedItems {
         margin: 15px 0;
-        height: 620px;
         padding: 20px 25px;
     }
 
+    .itemCard {
+        width: 380px;
+    }
+
+    .itemCard-image-div-img {
+        width: 180px;
+        height: 170px;
+    }
+
+    .item-name {
+        font-size: 20px;
+    }
+
+    .item-info {
+        padding: 50px 20px 0 20px;
+    }
+
+    .item-price {
+        margin: 0;
+        position: absolute;
+        bottom: 10px;
+        transform: translateX(125%);
+    }
+
     .statutoryDiv {
-        margin-top: 20px;
+        margin: 20px 20px 0 20px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
 
     .category-heading {
         display: flex;
         justify-content: center;
         font-size: 18px;
+        padding-left: 0;
     }
 
     .card-display {
