@@ -176,16 +176,50 @@ body{
     font-family: 'Montserrat', serif;
 }
 
+.order{
+    background-color: var(--ivory);
+    height:250px;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.orderDiv {
+    display: flex;
+}
+
+.airmenuLogo {
+    width: 140px;
+    height: 140px;
+}
+
+.orderLogoDiv {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.deliveryLogo {
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+}
+
+.takeawayLogo {
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+}
+
 .ourStorySection{
     background-color: white;
-    height:400px;
+    height:300px;
     position: relative;
     padding-bottom: 60px;
 }
 
 .ourStoryExpandedSection{
     background-color: white;
-    height:150px;
+    height:100px;
 }
 
 .featuredCollectionSection{

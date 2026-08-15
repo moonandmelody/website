@@ -13,16 +13,17 @@
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=moped_package,takeout_dining_2" />
 </head>
 <body>
 <div id="pageLoader" class="loader-overlay">
     <div class="loader-logo-wrapper">
-        <img src="images/primaryLogo.png" alt="Moon & Melody Logo" class="loader-logo">
+        <img src="images/darkLogo.png" alt="Moon & Melody Logo" class="loader-logo">
     </div>
 </div>
 <nav id="headerNav" class="navbar">
     <div class="logo">
-        <img src="images/secondaryLogo.png" alt="primary logo" class="secondaryLogoHeader positionRelative zIndex1">
+        <img src="images/darkLogo.png" alt="primary logo" class="secondaryLogoHeader positionRelative zIndex1">
         <img src="images/productNameAndTagline.png" alt="MOON & MELODY" class="productNameAndTaglineHeader positionRelative left-20">
     </div>
 
@@ -32,9 +33,10 @@
 
     <ul class="nav-menu" id="navMenu">
         <li><a href="javascript:navigateTo('home');" class="uppercase padding">Home</a></li>
+        <li><a href="javascript:navigateTo('order');" class="uppercase padding" >Orders</a></li>
+        <li><a href="javascript:void('0');" class="uppercase padding" id="openMenu">Menu</a></li>
         <li><a href="javascript:navigateTo('ourStorySection');" class="uppercase padding">Our Story</a></li>
         <!--<li><a href="javascript:navigateTo('featuredCollectionSection');" class="uppercase padding">Collections</a></li>-->
-        <li><a href="javascript:void('0');" class="uppercase padding" id="openMenu">Menu</a></li>
         <li><a href="javascript:navigateTo('teamSection');" class="uppercase padding">Founders</a></li>
         <li><a href="javascript:navigateTo('contactUsSection');" class="uppercase padding">Contact</a></li>
     </ul>
@@ -411,6 +413,40 @@
     </div>
 </div>
 
+<section id="order" class="container order">
+    <h1 class="textWeight100 uppercase">Orders</h1>
+    <div class="orderDiv">
+        <div style="width: 70%;">
+            <h3 style="color: var(--navy);font-weight: 300;margin-top: 0;">We have partnered with <b>Air Menus</b> for order taking and delivery. You can place your order for delivery or takeaway by clicking on the links below. <br /><br /></h3>
+            <div class="orderDiv">
+                <div class="orderLogoDiv">
+                    <a href="https://airmenus.in/moon&melody/order/Delivery/" style="text-decoration: none; color: var(--navy)">
+                        <div class="orderDiv">
+                            <h3 style="font-weight: bold;margin-top: 5px;margin-right: 10px;color: var(--navy);">Delivery</h3>
+                            <span class="material-symbols-outlined" style="font-size: 40px;">
+                                moped_package
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="orderLogoDiv">
+                    <a href="https://airmenus.in/moon&melody/order/Take-Away/" style="text-decoration: none; color: var(--navy)">
+                        <div class="orderDiv">
+                            <h3 style="font-weight: bold;margin-top: 5px;margin-right: 10px;color: var(--navy);">Take-Away</h3>
+                            <span class="material-symbols-outlined" style="font-size: 36px;">
+                                takeout_dining_2
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div style="width: 30%;text-align: center;">
+            <img src="images/airMenu.png" alt="Air Menus" class="airmenuLogo">
+        </div>
+    </div>
+</section>
+
 <section id="ourStorySection" class="container ourStorySection">
     <h1 class="textWeight100 uppercase">Our Story</h1>
     <button class="ourStoryExpand" title="Expand to know more..." id="ourStoryExpandButton">&#10094;</button>
@@ -540,7 +576,7 @@
 <section id="contactUsSection" class="container contactUsSection">
     <h1 class="textWeight100 uppercase" style="color: var(--gold);">Contact</h1>
     <div>
-        <ul>
+        <ul style="padding-left: 0;">
             <li>
                 <h3 class="textWeight100 description" style="color: var(--premium-white);">Although we are a small cloud kitchen, we take pride in the work we do, the quality of ingredients we use and the love that goes into each order.</h3>
             </li>
