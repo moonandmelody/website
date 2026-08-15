@@ -183,8 +183,23 @@ body{
     padding-bottom: 30px;
 }
 
+.orderText {
+    color: var(--navy);
+    font-weight: 300;
+    margin-top: 0;
+}
+
 .orderDiv {
     display: flex;
+}
+
+.orderTextDiv {
+    width: 70%;
+}
+
+.airmenuLogoDiv {
+    width: 30%;
+    text-align: center;
 }
 
 .airmenuLogo {
@@ -196,6 +211,34 @@ body{
     display: flex;
     justify-content: center;
     width: 50%;
+}
+
+.orderAnchor {
+    width: 100%;
+    color: var(--navy);
+    text-decoration: none;
+}
+
+.orderDeliveryAnchorDiv {
+    display: flex;
+}
+
+.orderTakeawayAnchorDiv {
+    display: flex;
+}
+
+.orderDeliveryDiv {
+    font-weight: bold;
+    margin-top: 5px;
+    margin-right: 10px;
+    color: var(--navy);
+}
+
+.orderTakeawayDiv {
+    font-weight: bold;
+    margin-top: 5px;
+    margin-right: 10px;
+    color: var(--navy);
 }
 
 .deliveryLogo {
@@ -835,6 +878,52 @@ body{
         display: flex;
         justify-content: center;
         text-align: center;
+    }
+
+    .order {
+        height: 450px;
+    }
+
+    .orderDiv {
+        display: inline;
+    }
+
+    .orderText {
+        text-align: center;
+    }
+
+    .airmenuLogoDiv {
+        width: 100%;
+        margin-bottom: 50px;
+        margin-top: 30px;
+    }
+
+    .orderTextDiv {
+        width: 100%;
+    }
+
+    .airmenuLogo {
+        height: 100px;
+        width: 100px;
+    }
+
+    .orderTypeOfDeliveryDiv {
+        display: flex;
+    }
+
+    .orderAnchor {
+        width: 100%;
+        color: var(--navy);
+        text-decoration: none;
+    }
+
+    .orderDeliveryAnchorDiv {
+        display: flex;
+    }
+
+    .orderTakeawayAnchorDiv {
+        display: flex;
+        justify-content: end;
     }
 
     .category-heading {

@@ -416,13 +416,16 @@
 <section id="order" class="container order">
     <h1 class="textWeight100 uppercase">Orders</h1>
     <div class="orderDiv">
-        <div style="width: 70%;">
-            <h3 style="color: var(--navy);font-weight: 300;margin-top: 0;">We have partnered with <b>Air Menus</b> for order taking and delivery. You can place your order for delivery or takeaway by clicking on the links below. <br /><br /></h3>
-            <div class="orderDiv">
+        <div class="airmenuLogoDiv">
+            <img src="images/airMenu.png" alt="Air Menus" class="airmenuLogo">
+        </div>
+        <div class="orderTextDiv">
+            <h3 class="orderText">We have partnered with <b>Air Menus</b> for order taking and delivery. You can place your order for delivery or takeaway by clicking on the links below. <br /><br /></h3>
+            <div class="orderTypeOfDeliveryDiv">
                 <div class="orderLogoDiv">
-                    <a href="https://airmenus.in/moon&melody/order/Delivery/" style="text-decoration: none; color: var(--navy)">
-                        <div class="orderDiv">
-                            <h3 style="font-weight: bold;margin-top: 5px;margin-right: 10px;color: var(--navy);">Delivery</h3>
+                    <a class="orderAnchor" href="https://airmenus.in/moon&melody/order/Delivery/">
+                        <div class="orderDeliveryAnchorDiv">
+                            <h3 class="orderDeliveryDiv">Delivery</h3>
                             <span class="material-symbols-outlined" style="font-size: 40px;">
                                 moped_package
                             </span>
@@ -430,9 +433,9 @@
                     </a>
                 </div>
                 <div class="orderLogoDiv">
-                    <a href="https://airmenus.in/moon&melody/order/Take-Away/" style="text-decoration: none; color: var(--navy)">
-                        <div class="orderDiv">
-                            <h3 style="font-weight: bold;margin-top: 5px;margin-right: 10px;color: var(--navy);">Take-Away</h3>
+                    <a class="orderAnchor" href="https://airmenus.in/moon&melody/order/Take-Away/" style="text-decoration: none; color: var(--navy)">
+                        <div class="orderTakeawayAnchorDiv">
+                            <h3 class="orderTakeawayDiv">Take-Away</h3>
                             <span class="material-symbols-outlined" style="font-size: 36px;">
                                 takeout_dining_2
                             </span>
@@ -440,9 +443,6 @@
                     </a>
                 </div>
             </div>
-        </div>
-        <div style="width: 30%;text-align: center;">
-            <img src="images/airMenu.png" alt="Air Menus" class="airmenuLogo">
         </div>
     </div>
 </section>
