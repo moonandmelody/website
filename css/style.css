@@ -104,8 +104,8 @@ body{
 
 .collection-hero-inner-left{
     height: 100%;
-    width: 40%;
     display: flex;
+    width: 40%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
