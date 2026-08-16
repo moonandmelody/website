@@ -9,10 +9,16 @@
     margin: 40px 100px;
 }
 
+.last-card-perspective {
+    margin: 10px 10px;
+    perspective: 1000px;
+    width: fit-content;
+}
+
 /* 2. Main Visiting Card Box */
 .visiting-card {
-    width: 320px;               /* Tall, narrow visiting card aspect ratio */
-    min-height: 550px;
+    width: 500px;               /* Tall, narrow visiting card aspect ratio */
+    max-height: 740px;
     background: #fcfcfc;        /* Premium paper off-white color */
     border: 1px solid #e2e8f0;
     border-radius: 6px;         /* Subtle corner rounding, mimicking cut paper */
@@ -40,6 +46,28 @@
             0 15px 12px rgba(0, 0, 0, 0.08);
 }
 
+.visiting-last-card {
+    width: 1200px;
+    height: auto;
+    background: #fcfcfc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Montserrat', serif;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.12), 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+    transform-style: preserve-3d;
+}
+
+/* 3. Hover State: Lifts up and tilts forward toward the viewer */
+.visiting-last-card:hover {
+    /* Deepens and widens the drop shadow on hover to mimic physical lift */
+    box-shadow:
+            0 20px 38px rgba(0, 0, 0, 0.15),
+            0 15px 12px rgba(0, 0, 0, 0.08);
+}
+
 /* Image Presentation */
 .profile-image-wrapper {
     display: flex;
@@ -47,14 +75,22 @@
     margin-top: 35px;
 }
 
-.profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 8px; /* Slightly rounded square instead of full circle */
-    object-fit: contain;
+.image-wrapper {
+    width: 220px;
+    height: 230px;
     border: 1px solid var(--premium-white-border);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.profile-img {
+    width: 220px;
+    height: 230px;
+    border-radius: 8px; /* Slightly rounded square instead of full circle */
+    object-fit: cover;
     background-color: var(--premium-white);
-    padding: 4px; /* Creates a clean matting border effect around the photo */
+    object-position: center top;
+    transform: scale(1.1);
 }
 
 /* Typography & Internal Layout */
@@ -104,5 +140,29 @@
 @media (max-width: 768px) {
     .card-perspective {
         margin: 10px 10px;
+    }
+
+    .visiting-card {
+        width: 390px;
+        max-height: 1000px;
+    }
+
+    .visiting-last-card {
+        width: 390px;
+    }
+
+    .teammate-pill {
+        max-width: 400px;
+    }
+
+    .pill-divider {
+        opacity: 1;
+        max-width: 2px;
+        margin: 0 14px;
+    }
+
+    .teammate-meaning {
+        opacity: 1;
+        max-width: 200px;
     }
 }

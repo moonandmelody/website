@@ -8,9 +8,16 @@ const  collectionPrevBtn = document.getElementById('collectionPrevBtn');
 const  collectionNextBtn = document.getElementById('collectionNextBtn');
 const  collectionDots = document.querySelectorAll('.featuredCollectionDot');
 
+const  signatureCarouselTrack = document.getElementById('signatureCarouselTrack');
+const signatureDots = document.querySelectorAll('.signatureDot');
+
+const  gourmetCarouselTrack = document.getElementById('gourmetCarouselTrack');
+const gourmetDots = document.querySelectorAll('.gourmetDot');
+
 const  bakedCarouselTrack = document.getElementById('bakedCarouselTrack');
 const  bakedItemsPrevBtn = document.getElementById('bakedItemsPrevBtn');
 const  bakedItemsNextBtn = document.getElementById('bakedItemsNextBtn');
+const bakedDots = document.querySelectorAll('.bakedDot');
 
 // Function to update which dot highlights as active
 function updateIndicators() {
@@ -51,7 +58,7 @@ prevBtn.addEventListener('click', () => {
     }
 });
 
-setInterval(autoscroll,10000);
+setInterval(autoscroll,15000);
 
 function autoscroll(){
     nextBtn.click();
@@ -70,14 +77,12 @@ dots.forEach(dot => {
     });
 });
 
-
-// Function to update which dot highlights as active for collection carousel
-function updateCollectionIndicators() {
-    const slideWidth = collectionTrack.clientWidth;
+function updateSignatureIndicators() {
+    const slideWidth = signatureCarouselTrack.clientWidth;
     // Calculate the current active slide index based on scroll position
-    const activeIndex = Math.round(collectionTrack.scrollLeft / slideWidth);
+    const activeIndex = Math.round(signatureCarouselTrack.scrollLeft / slideWidth);
 
-    collectionDots.forEach((dot, index) => {
+    signatureDots.forEach((dot, index) => {
         if (index === activeIndex) {
             dot.classList.add('active');
         } else {
@@ -86,51 +91,39 @@ function updateCollectionIndicators() {
     });
 }
 
-/*
-collectionTrack.addEventListener('scroll', updateCollectionIndicators);
+signatureCarouselTrack.addEventListener('scroll', updateSignatureIndicators);
 
-// Move track forward by the width of one slide
-collectionNextBtn.addEventListener('click', () => {
-    const slideWidth = collectionTrack.clientWidth;
-    // If at the end, loop back to start
-    if (collectionTrack.scrollLeft + slideWidth >= collectionTrack.scrollWidth) {
-        collectionTrack.scrollTo({ left: 0, behavior: 'smooth' });
-    } else {
-        collectionTrack.scrollBy({ left: slideWidth, behavior: 'smooth' });
-    }
-});
+function updateGourmetIndicators() {
+    const slideWidth = gourmetCarouselTrack.clientWidth;
+    // Calculate the current active slide index based on scroll position
+    const activeIndex = Math.round(gourmetCarouselTrack.scrollLeft / slideWidth);
 
-// Move track backward by the width of one slide
-collectionPrevBtn.addEventListener('click', () => {
-    const slideWidth = collectionTrack.clientWidth;
-    // If at the start, loop back to the end
-    if (collectionTrack.scrollLeft <= 0) {
-        collectionTrack.scrollTo({ left: collectionTrack.scrollWidth, behavior: 'smooth' });
-    } else {
-        collectionTrack.scrollBy({ left: -slideWidth, behavior: 'smooth' });
-    }
-});
-
-setInterval(collectionAutoscroll,10000);
-
-function collectionAutoscroll(){
-    collectionNextBtn.click();
+    gourmetDots.forEach((dot, index) => {
+        if (index === activeIndex) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
 }
 
-// Click functionality for the dots
-collectionDots.forEach(dot => {
-    dot.addEventListener('click', (e) => {
-        const targetIndex = e.target.getAttribute('data-index');
-        const slideWidth = collectionTrack.clientWidth;
+gourmetCarouselTrack.addEventListener('scroll', updateGourmetIndicators);
 
-        collectionTrack.scrollTo({
-            left: targetIndex * slideWidth,
-            behavior: 'smooth'
-        });
+function updateBakedIndicators() {
+    const slideWidth = bakedCarouselTrack.clientWidth;
+    // Calculate the current active slide index based on scroll position
+    const activeIndex = Math.round(bakedCarouselTrack.scrollLeft / slideWidth);
+
+    bakedDots.forEach((dot, index) => {
+        if (index === activeIndex) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
     });
-});
+}
 
- */
+bakedCarouselTrack.addEventListener('scroll', updateBakedIndicators);
 
 // Move track forward by the width of one slide
 bakedItemsNextBtn.addEventListener('click', () => {

@@ -91,11 +91,15 @@ body{
 
 .hero-inner-right{
     height: 100%;
-    width: 40%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.list {
+    margin: 0;
 }
 
 .collection-hero-inner-left{
@@ -177,8 +181,8 @@ body{
 }
 
 .order{
-    background-color: var(--ivory);
-    height:250px;
+    background-color: white;
+    height:300px;
     position: relative;
     padding-bottom: 30px;
 }
@@ -191,6 +195,7 @@ body{
 
 .orderDiv {
     display: flex;
+    margin-top: 50px;
 }
 
 .orderTextDiv {
@@ -213,6 +218,10 @@ body{
     width: 50%;
 }
 
+.orderTypeOfDeliveryDiv {
+    display: flex;
+}
+
 .orderAnchor {
     width: 100%;
     color: var(--navy);
@@ -221,10 +230,14 @@ body{
 
 .orderDeliveryAnchorDiv {
     display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .orderTakeawayAnchorDiv {
     display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .orderDeliveryDiv {
@@ -254,15 +267,48 @@ body{
 }
 
 .ourStorySection{
-    background-color: white;
-    height:300px;
+    background-color: var(--rose);
+    height:230px;
     position: relative;
     padding-bottom: 60px;
 }
 
-.ourStoryExpandedSection{
-    background-color: white;
-    height:100px;
+.ourStoryTextLeft {
+    width: 100%;
+}
+
+.ourStoryTextRight {
+    width: 70%;
+    text-align: right;
+    padding-left: 30%;
+}
+
+.ourStoryExpandedDiv {
+    display: flex;
+}
+
+.ourStoryExpandedTextRight {
+    width: 95%;
+    text-align: right;
+    padding-left: 5%;
+}
+
+.imageDiv {
+    align-content: center;
+    height: 368px;
+}
+
+.usImage {
+    height: 335px;
+    width: 420px;
+    border-radius: 20px;
+}
+
+.ourStoryText {
+    color: var(--navy);
+    font-weight: 400;
+    font-size: 18px;
+    text-align: justify;
 }
 
 .featuredCollectionSection{
@@ -276,7 +322,85 @@ body{
 
 .contactUsSection{
     background-color: var(--navy);
-    height:400px;
+    height:370px;
+}
+
+.contactInfoDiv {
+    display: flex;
+    margin-top: 50px;
+}
+
+.orderAnchor {
+    width: 100%;
+    color: var(--navy);
+    text-decoration: none;
+}
+
+.socialsDiv {
+    display: inline-grid;
+    width: 55%;
+    row-gap: 5px;
+}
+
+.material-icon {
+    font-size: 30px !important;
+    font-weight: 500;
+    color:white;
+    height: 25px;
+}
+
+.phoneDiv {
+    display: flex;
+    gap: 10px;
+}
+
+.emailDiv {
+    display: flex;
+    gap: 10px;
+}
+
+.instagramDiv {
+    display: flex;
+    gap: 10px;
+}
+
+.contactAnchor {
+    width: 100%;
+    color: white;
+    text-decoration: none;
+}
+
+.addressDiv {
+    display: flex;
+    gap: 10px;
+}
+
+.reviewsDiv {
+    display: flex;
+    gap: 10px;
+}
+
+.instgramImage {
+    height: 25px;
+    width: 25px;
+    margin-left: 2px;
+}
+
+.timingsDiv {
+    display: inline;
+    width: 60%;
+}
+
+.timings {
+    color: white;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.timingsText {
+    color: white;
+    font-weight: 200;
+    margin-top: 0;
 }
 
 .hero-inner-right div{
@@ -300,6 +424,36 @@ body{
     font-weight: 100;
     color: white;
     letter-spacing: 1px;
+}
+
+.slotTimings {
+    display: flex;
+    gap: 50px;
+    margin-top: 36px;
+}
+
+.deliverySlot {
+    padding-left: 10px;
+}
+
+.deliveryDays {
+   display: flex;
+}
+
+.deliveryTimings {
+    display: flex;
+}
+
+.takeawaySlot {
+    padding-left: 10px;
+}
+
+.takeawayDays {
+    display: flex;
+}
+
+.takeawayTimings {
+    display: flex;
 }
 
 .footer{
@@ -336,21 +490,33 @@ body{
             0 30px 60px rgba(0, 0, 0, 0.05);
 }
 
+.story-wrapper {
+    position: relative;
+    width: 100%;
+    transition: max-height 0.6s ease;
+    /* Set this to your default/collapsed height */
+    max-height: 300px;
+    z-index: 998;
+}
+
+.story-wrapper.open {
+    max-height: 1000px; /* Large enough value to clear both sections */
+}
+
 .ourStoryExpand{
     position: absolute;
-    bottom: 10px;
-    top: 98%;
+    bottom: -30px;
     left: 50%;
     transform: translateX(-50%) rotate(-90deg);
-    color: var(--navy);
+    color: white;
     border: none;
     padding: 0 15px 0 10px;
     cursor: pointer;
     font-size: 30px;
     z-index: 1;
     /*border-radius: 50%;*/
-    background-color: white;
-    transition: all 0.6s ease;
+    background-color: var(--rose);
+    transition: transform 0.1s ease;
     width: 40px;
     height: 50px;
     /*opacity: 0.2;*/
@@ -358,36 +524,42 @@ body{
 
 .ourStoryExpandClose{
     position: absolute;
-    bottom: 10px;
-    top: 127%;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%) rotate(90deg);
-    color: var(--navy);
+    color: white;
     border: none;
     padding: 0 15px 0 0;
     cursor: pointer;
     font-size: 30px;
     z-index: 1;
     /*border-radius: 50%;*/
-    background-color: white;
-    transition: all 0.6s ease;
+    background-color: var(--rose);
+    transition: transform 0.1s ease;
     width: 25px;
     height: 50px;
     /*opacity: 0.2;*/
 }
 
 .ourStoryExpandedSection{
+    display: none;
+    background-color: var(--rose);
+    height:620px;
     opacity: 0;
     visibility: hidden;
-    max-height: 0;
     overflow: hidden;
     transition: opacity 0.6s ease, max-height 0.6s ease, visibility 0.6s;
 }
 
+.ourStorySection.show{
+    padding-bottom: 60px;
+}
+
 .ourStoryExpandedSection.show{
+    display: block;
     opacity: 1;
     visibility: visible;
-    max-height: 1000px;
+    padding-top: 0;
 }
 
 /* Teammate name animator css */
@@ -582,7 +754,7 @@ body{
 .signatureItems{
     margin: 15px 15px;
     background-color: var(--navy);
-    height: 600px;
+    height: 630px;
     padding: 20px;
     border-radius: 35px;
     box-shadow:
@@ -591,28 +763,41 @@ body{
             0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.signature-carousel-indicators {
+    display: none;
+}
+
+
 .gourmetItems{
     margin: 15px 15px;
     background-color: var(--ivory);
-    height: 600px;
+    height: 630px;
     padding: 20px;
     border-radius: 35px;
     box-shadow:
             0 1px 3px rgba(0, 0, 0, 0.1),
             0 10px 20px rgba(0, 0, 0, 0.52),
             0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gourmet-carousel-indicators {
+    display: none;
 }
 
 .bakedItems{
     margin: 15px 15px;
     background-color: var(--gold);
-    height: 600px;
+    height: 630px;
     padding: 20px;
     border-radius: 35px;
     box-shadow:
             0 1px 3px rgba(0, 0, 0, 0.1),
             0 10px 20px rgba(0, 0, 0, 0.52),
             0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.baked-carousel-indicators {
+    display: none;
 }
 
 .addOnItems{
@@ -637,7 +822,8 @@ body{
 }
 
 .itemCard {
-    width: 400px;               /* Tall, narrow visiting card aspect ratio */
+    width: 390px;               /* Tall, narrow visiting card aspect ratio */
+    min-width: 390px;
     height: 500px;
     background: #fcfcfc;        /* Premium paper off-white color */
     border: 1px solid #e2e8f0;
@@ -681,7 +867,7 @@ body{
 .item-name {
     margin: 0;
     color: var(--navy);
-    font-size: 1.1rem;
+    font-size: 17px;
     font-weight: 700;
     letter-spacing: -0.02em;
 }
@@ -717,7 +903,7 @@ body{
 }
 
 .item-price {
-    margin: 50px 0 0 0;
+    margin: 40px 0 0 0;
     color: var(--gold); /* Accent color matching top stripe */
     font-size: 0.95rem;
     font-weight: 600;
@@ -836,21 +1022,57 @@ body{
 
     .signatureItems {
         margin: 15px 0;
-        padding: 20px 25px;
+        padding: 20px 30px;
+    }
+
+    .signature-carousel-indicators {
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px; /* Spacing between dots */
+        z-index: 10;
     }
 
     .gourmetItems {
         margin: 15px 0;
-        padding: 20px 25px;
+        padding: 20px 30px;
+    }
+
+    .gourmet-carousel-indicators {
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px; /* Spacing between dots */
+        z-index: 10;
     }
 
     .bakedItems {
         margin: 15px 0;
-        padding: 20px 25px;
+        padding: 20px 30px;
+    }
+
+    .baked-carousel-indicators {
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px; /* Spacing between dots */
+        z-index: 10;
     }
 
     .itemCard {
-        width: 380px;
+        width: 370px;
+        min-width: 370px;
+        /* Adjust width so the user can see one card clearly on mobile */
+        flex: 0 0 calc(100% - 40px);
+
+        /* Tells the browser exactly where to snap the card */
+        scroll-snap-align: center;
     }
 
     .itemCard-image-div-img {
@@ -878,6 +1100,18 @@ body{
         display: flex;
         justify-content: center;
         text-align: center;
+    }
+
+    .hero {
+       height: 700px;
+    }
+
+    .hero-inner-right {
+        text-align: justify;
+    }
+
+    .paddingBottom45 {
+        padding-bottom: 45px;
     }
 
     .order {
@@ -919,11 +1153,49 @@ body{
 
     .orderDeliveryAnchorDiv {
         display: flex;
+        justify-content: flex-start;
     }
 
     .orderTakeawayAnchorDiv {
         display: flex;
         justify-content: end;
+    }
+
+    .story-wrapper {
+        max-height: 600px;
+    }
+
+    .story-wrapper.open {
+        max-height: 1810px;
+    }
+
+    .ourStorySection {
+        height: 530px;
+    }
+
+    .ourStoryExpandedSection{
+        height:1200px;
+    }
+
+    .ourStoryExpandedDiv {
+        display: inline-grid;
+    }
+
+    .imageDiv {
+        height: 180px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .usImage {
+        height: 150px;
+        width: 200px;
+    }
+
+    .ourStoryExpandedTextRight {
+        width: 100%;
+        text-align: justify;
+        padding-left: 0;
     }
 
     .category-heading {
@@ -940,6 +1212,30 @@ body{
 
     .card-perspective {
         margin: 10px 10px;
+    }
+
+    .contactUsSection {
+        height: 870px;
+    }
+
+    .contactInfoDiv {
+        display: inline-grid;
+        margin-top: 20px;
+    }
+
+    .slotTimings {
+        display: inline-grid;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .socialsDiv {
+        width: 100%;
+    }
+
+    .timingsDiv {
+        margin-top: 20px;
+        width: 100%;
     }
 
     .footer h4 {

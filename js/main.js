@@ -49,8 +49,6 @@ window.addEventListener('scroll', () => {
 });
 
 overlayBody.addEventListener('scroll', (e) => {
-    console.log("overlayDiv is scrolling");
-    console.log(overlayBody.scrollHeight);
     // Check if user has scrolled down more than 20 pixels
     let currentScrollY = e.currentTarget.scrollTop;
 
@@ -63,10 +61,14 @@ overlayBody.addEventListener('scroll', (e) => {
 
 const ourStoryExpandButton = document.getElementById("ourStoryExpandButton");
 const ourStoryExpandedSection = document.getElementById("ourStoryExpandedSection");
+const ourStorySection = document.getElementById("ourStorySection");
+const ourStoryWrapper = document.getElementById("storyWrapperDiv");
 
 ourStoryExpandButton.addEventListener('click',() => {
+    ourStorySection.classList.toggle("show");
     ourStoryExpandedSection.classList.toggle("show");
     ourStoryExpandButton.classList.toggle("ourStoryExpandClose");
+    ourStoryWrapper.classList.toggle("open");
 });
 
 document.getElementById('navToggle').addEventListener('click', function() {
