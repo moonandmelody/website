@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" >
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=moped_package,takeout_dining_2" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=moped_package,takeout_dining_2,call,mail,reviews,location_on,schedule,today" />
 </head>
 <body>
 <div id="pageLoader" class="loader-overlay">
@@ -423,7 +423,7 @@
             <h3 class="orderText">We have partnered with <b>Air Menus</b> for order taking and delivery. You can place your order for delivery or takeaway by clicking on the links below. <br /><br /></h3>
             <div class="orderTypeOfDeliveryDiv">
                 <div class="orderLogoDiv">
-                    <a class="orderAnchor" href="https://airmenus.in/moon&melody/order/Delivery/">
+                    <a class="orderAnchor" href="https://airmenus.in/moon&melody/order/Delivery/" target="_blank">
                         <div class="orderDeliveryAnchorDiv">
                             <h3 class="orderDeliveryDiv">Delivery</h3>
                             <span class="material-symbols-outlined" style="font-size: 40px;">
@@ -433,7 +433,7 @@
                     </a>
                 </div>
                 <div class="orderLogoDiv">
-                    <a class="orderAnchor" href="https://airmenus.in/moon&melody/order/Take-Away/" style="text-decoration: none; color: var(--navy)">
+                    <a class="orderAnchor" href="https://airmenus.in/moon&melody/order/Take-Away/" target="_blank">
                         <div class="orderTakeawayAnchorDiv">
                             <h3 class="orderTakeawayDiv">Take-Away</h3>
                             <span class="material-symbols-outlined" style="font-size: 36px;">
@@ -576,20 +576,87 @@
 <section id="contactUsSection" class="container contactUsSection">
     <h1 class="textWeight100 uppercase" style="color: var(--gold);">Contact</h1>
     <div>
-        <ul style="padding-left: 0;">
-            <li>
-                <h3 class="textWeight100 description" style="color: var(--premium-white);">Although we are a small cloud kitchen, we take pride in the work we do, the quality of ingredients we use and the love that goes into each order.</h3>
-            </li>
-            <li>
-                <h3 class="textWeight100 description">Please feel free to contact us on the below mediums. </h3>
-            </li>
-            <li>
-                <h3 class="textWeight100 description">Please feel free to contact us on the below mediums. </h3>
-            </li>
-            <li>
-                <h3 class="textWeight100 description">Please feel free to contact us on the below mediums. </h3>
-            </li>
-        </ul>
+        <div class="contactTextDiv">
+            <h3 class="textWeight100 description" style="color: var(--premium-white);">Our goal is to serve consistent, high quality, healthy snacks and beverages</h3>
+        </div>
+        <div class="contactInfoDiv">
+            <div class="socialsDiv">
+                <div class="phoneDiv">
+                    <span class="material-symbols-outlined material-icon">
+                        call
+                    </span>
+                    <h3 style="color: white;font-weight: 300;margin-top: 3px;">+91 7795680076</h3>
+                </div>
+                <div class="emailDiv">
+                    <span class="material-symbols-outlined material-icon">
+                        mail
+                    </span>
+                    <h3 style="color: white;font-weight: 300;margin-top: 3px;">hello@moonandmelody.com</h3>
+                </div>
+                <div class="instagramDiv">
+                    <img src="images/instagram.webp" alt="Instagram" class="instgramImage">
+                    <h3 style="color: white;font-weight: 300;margin-top: 3px;margin-left: 2px;"><a class="contactAnchor" href="https://instagram.com/_moonandmelody" target="_blank">@_moonandmelody</a></h3>
+                </div>
+                <div class="reviewsDiv">
+                    <span class="material-symbols-outlined material-icon">
+                        reviews
+                    </span>
+                    <h3 style="color: white;font-weight: 300;margin-top: 3px;"><a href="https://g.page/r/CQkFWY5uif5REBM/review" target="_blank" class="contactAnchor">Give us a review</a></h3>
+                </div>
+                <div class="addressDiv">
+                    <span class="material-symbols-outlined material-icon">
+                        location_on
+                    </span>
+                    <h3 style="color: white;font-weight: 300;margin-top: 3px;"><a href="https://maps.app.goo.gl/M2M66NvbD84yeXmu7" target="_blank" class="contactAnchor">#435, Shrirama, 7th Cross, 5th Main, RBI Layout, <br />JP Nagar 7th Phase, Bengaluru - 78</a></h3>
+                </div>
+            </div>
+            <div class="timingsDiv">
+                <div>
+                    <h2 class="timings">Timings:</h2>
+                    <h3 class="timingsText">We only work on a pre-order basis, so hurry and place your order!</h3>
+                </div>
+                <div class="slotTimings">
+                    <div>
+                        <h3 style="color: white;font-weight: 300;margin-top: 0;">
+                            Delivery Slots:
+                        </h3>
+                        <div class="deliverySlot">
+                            <div class="deliveryDays">
+                            <span class="material-symbols-outlined material-icon">
+                                today
+                            </span>
+                                <h3 style="margin-top: 5px;color: white;font-weight: 300;margin-left: 10px;">Wednesday - Sunday</h3>
+                            </div>
+                            <div class="deliveryTimings">
+                            <span class="material-symbols-outlined material-icon">
+                                schedule
+                            </span>
+                                <h3 style="margin-top: 5px;color: white;font-weight: 300;margin-left: 10px;">06:30 PM - 10:30 PM</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 style="color: white;font-weight: 300;margin-top: 0;">
+                            Take-Away Slots:
+                        </h3>
+                        <div class="takeawaySlot">
+                            <div class="takeawayDays">
+                            <span class="material-symbols-outlined material-icon">
+                                today
+                            </span>
+                                <h3 style="margin-top: 5px;color: white;font-weight: 300;margin-left: 10px;">Wednesday - Sunday</h3>
+                            </div>
+                            <div class="takeawayTimings">
+                            <span class="material-symbols-outlined material-icon">
+                                schedule
+                            </span>
+                                <h3 style="margin-top: 5px;color: white;font-weight: 300;margin-left: 10px;">06:30 PM - 09:30 PM</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
