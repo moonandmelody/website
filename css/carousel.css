@@ -25,6 +25,7 @@
     overflow: hidden;
     border-radius: 8px;
     top: 0;
+    height: 82%;
 }
 
 /* Horizontal track container utilizing flexbox */

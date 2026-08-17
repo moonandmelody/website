@@ -416,6 +416,10 @@ body{
     font-weight: 100;
 }
 
+.textWeight200{
+    font-weight: 200;
+}
+
 .montserrat{
    font-family: 'Montserrat',serif;
 }
@@ -529,7 +533,7 @@ body{
     transform: translateX(-50%) rotate(90deg);
     color: white;
     border: none;
-    padding: 0 15px 0 0;
+    padding: 0 15px 2px 0;
     cursor: pointer;
     font-size: 30px;
     z-index: 1;
@@ -1174,11 +1178,15 @@ body{
     }
 
     .ourStoryExpandedSection{
-        height:1200px;
+        height:1220px;
     }
 
     .ourStoryExpandedDiv {
         display: inline-grid;
+    }
+
+    .ourStoryExpand {
+        padding: 0 15px 3px 10px;
     }
 
     .imageDiv {
