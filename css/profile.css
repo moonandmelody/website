@@ -166,3 +166,33 @@
         max-width: 200px;
     }
 }
+
+@media (max-width: 402px) {
+    .card-perspective {
+        margin: 5px 5px;
+    }
+
+    .visiting-card {
+        width: 360px;
+        max-height: 1000px;
+    }
+
+    .visiting-last-card {
+        width: 360px;
+    }
+
+    .teammate-pill {
+        max-width: 360px;
+    }
+
+    .pill-divider {
+        opacity: 1;
+        max-width: 2px;
+        margin: 0 10px;
+    }
+
+    .teammate-meaning {
+        opacity: 1;
+        max-width: 170px;
+    }
+}
