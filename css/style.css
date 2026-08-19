@@ -907,12 +907,15 @@ body{
 }
 
 .item-price {
-    margin: 40px 0 0 0;
+    margin-bottom: 10px;
     color: var(--gold); /* Accent color matching top stripe */
     font-size: 0.95rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
+    bottom: 0;
+    position: absolute;
+    transform: translateX(115%);
 }
 
 .statutoryDiv{
