@@ -58,7 +58,7 @@ prevBtn.addEventListener('click', () => {
     }
 });
 
-setInterval(autoscroll,15000);
+setInterval(autoscroll,18000);
 
 function autoscroll(){
     nextBtn.click();

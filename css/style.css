@@ -1361,7 +1361,7 @@ body{
     }
 
     .item-name {
-        font-size: 15px;
+        font-size: 17px;
     }
 
     .item-info {
@@ -1372,7 +1372,7 @@ body{
         margin: 0;
         position: absolute;
         bottom: 10px;
-        transform: translateX(125%);
+        transform: translateX(115%);
     }
 
     .statutoryDiv {
@@ -1503,7 +1503,7 @@ body{
     }
 
     .contactUsSection {
-        height: 870px;
+        height: 900px;
     }
 
     .contactInfoDiv {
